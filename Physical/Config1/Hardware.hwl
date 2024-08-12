@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/12/2024 08:38:39" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="X20BB57" Type="X20BB57" X="95" Y="100" />
+    <Module Name="X20PS9600" Type="X20PS9600" X="120" Y="100" />
+    <Module Name="X20TB12" Type="X20TB12" X="120" Y="127" />
+    <Module Name="X20CP0484_1" Type="X20CP0484-1" X="95" Y="100" />
+    <Module Name="Motor1" Type="8JSA24.E8080D000-0" X="122" Y="458.2811" />
+    <Module Name="DeltaAxis1_2" Type="80VD100PD.C000-14" X="135" Y="249" />
+    <Module Name="Motor2" Type="8JSA24.E8080D000-0" X="135" Y="567" />
+    <Module Name="DeltaAxis3" Type="80VD100PD.C000-01" X="255" Y="249" />
+    <Module Name="Motor3" Type="8JSA24.E8080D000-0" X="255" Y="493.182556" />
+  </Modules>
+  <Links>
+    <Link From="X20CP0484_1" To="DeltaAxis1_2" FromPort="IF3" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="109" Y="173" />
+      <Point X="109" Y="173" />
+      <Point X="94" Y="173" />
+      <Point X="85" Y="173" />
+      <Point X="85" Y="205" />
+      <Point X="205" Y="205" />
+      <Point X="205" Y="308" />
+      <Point X="193" Y="308" />
+      <Point X="174" Y="308" />
+      <Point X="174" Y="323" />
+    </Link>
+    <Link From="Motor1" To="DeltaAxis1_2" FromPort="MT" ToPort="MT1" IsRoutedByUser="False">
+      <Point X="171.5" Y="464.3811" />
+      <Point X="171.5" Y="464.3811" />
+      <Point X="171.5" Y="457.3811" />
+      <Point X="171.5" Y="445" />
+      <Point X="168" Y="445" />
+      <Point X="168" Y="411" />
+      <Point X="154" Y="411" />
+      <Point X="154" Y="384" />
+      <Point X="154" Y="373" />
+      <Point X="154" Y="373" />
+    </Link>
+    <Link From="DeltaAxis1_2" To="Motor2" FromPort="MT2" ToPort="MT" IsRoutedByUser="False">
+      <Point X="179" Y="373" />
+      <Point X="179" Y="373" />
+      <Point X="179" Y="384" />
+      <Point X="179" Y="395" />
+      <Point X="205" Y="395" />
+      <Point X="205" Y="555" />
+      <Point X="184.5" Y="555" />
+      <Point X="184.5" Y="566.1" />
+      <Point X="184.5" Y="573.1" />
+      <Point X="184.5" Y="573.1" />
+    </Link>
+    <Link From="Motor1" To="DeltaAxis1_2" FromPort="EC" ToPort="EC1" IsRoutedByUser="False">
+      <Point X="143.5" Y="464.3811" />
+      <Point X="143.5" Y="464.3811" />
+      <Point X="143.5" Y="457.3811" />
+      <Point X="143.5" Y="445" />
+      <Point X="125" Y="445" />
+      <Point X="125" Y="302" />
+      <Point X="134" Y="302" />
+      <Point X="143" Y="302" />
+      <Point X="143" Y="302" />
+    </Link>
+    <Link From="Motor2" To="DeltaAxis1_2" FromPort="EC" ToPort="EC2" IsRoutedByUser="False">
+      <Point X="156.5" Y="573.1" />
+      <Point X="156.5" Y="573.1" />
+      <Point X="156.5" Y="566.1" />
+      <Point X="156.5" Y="555" />
+      <Point X="115" Y="555" />
+      <Point X="115" Y="317" />
+      <Point X="134" Y="317" />
+      <Point X="157" Y="317" />
+      <Point X="157" Y="302" />
+    </Link>
+    <Link From="DeltaAxis1_2" To="DeltaAxis3" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="184" Y="323" />
+      <Point X="184" Y="323" />
+      <Point X="193" Y="323" />
+      <Point X="205" Y="323" />
+      <Point X="205" Y="388" />
+      <Point X="325" Y="388" />
+      <Point X="325" Y="308" />
+      <Point X="313" Y="308" />
+      <Point X="294" Y="308" />
+      <Point X="294" Y="323" />
+    </Link>
+    <Link From="DeltaAxis3" To="Motor3" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
+      <Point X="274" Y="373" />
+      <Point X="274" Y="373" />
+      <Point X="274" Y="384" />
+      <Point X="274" Y="395" />
+      <Point X="304.5" Y="395" />
+      <Point X="304.5" Y="492.282562" />
+      <Point X="304.5" Y="499.282562" />
+      <Point X="304.5" Y="499.282562" />
+    </Link>
+    <Link From="Motor3" To="DeltaAxis3" FromPort="EC" ToPort="EC1" IsRoutedByUser="False">
+      <Point X="276.5" Y="499.282562" />
+      <Point X="276.5" Y="499.282562" />
+      <Point X="276.5" Y="492.282562" />
+      <Point X="276.5" Y="485" />
+      <Point X="245" Y="485" />
+      <Point X="245" Y="302" />
+      <Point X="254" Y="302" />
+      <Point X="263" Y="302" />
+      <Point X="263" Y="302" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

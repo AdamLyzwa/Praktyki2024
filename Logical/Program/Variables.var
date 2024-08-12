@@ -1,0 +1,10 @@
+VAR
+	FB_Axis_1 : MpAxisBasic;
+	AxisParam_1 : MpAxisBasicParType;
+	DeltaStep : DeltaState;
+	MpDelta3Axis_0 : MpDelta3Axis;
+	DeltaParameters : MpDelta3AxisParType;
+	VisuPos : ARRAY[0..2] OF REAL;
+	diDeltaOn : BOOL;
+	diDeltaMove : BOOL;
+END_VAR

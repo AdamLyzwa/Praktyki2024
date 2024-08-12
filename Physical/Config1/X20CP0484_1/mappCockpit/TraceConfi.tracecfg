@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="NewTraceConfig" Type="tracecfg">
+    <Property ID="mappCockpitTypeID" Value="TraceCfg" />
+    <Group ID="TrcTimingSettings">
+      <Property ID="TrcTotalRecordingTime" Value="5.0" />
+      <Property ID="TrcTriggerOffsetTime" Value="0.0" />
+      <Selector ID="TrcPVTaskClass" Value="TrcCyclic_1">
+        <Property ID="TrcPLCSampleTime" Value="0.0" />
+      </Selector>
+      <Property ID="TrcACOPOSSampleTime" Value="0.0004" />
+    </Group>
+    <Group ID="TrcTriggerSettings">
+      <Group ID="TrcTriggerCondition[1]">
+        <Property ID="TrcTriggerDataPoint" Value="::Program:MpDelta3Axis_0.PathVelocity" />
+        <Selector ID="TrcTriggerConditionSelection" Value="coTRACE_ABOVE_THRESHOLD_EVENT">
+          <Property ID="TrcThreshold" Value="0.0" />
+          <Property ID="TrcWindow" Value="1" />
+        </Selector>
+      </Group>
+    </Group>
+    <Group ID="TrcErrorHandlingSettings">
+      <Property ID="TrcErrorReactionSelection" Value="TrcarCONTINUE" />
+    </Group>
+    <Group ID="TrcRecordedSettings">
+      <Property ID="TrcRecordedDataName" />
+    </Group>
+    <Group ID="TrcDataPointList">
+      <Property ID="TrcDataPoint[1]" Value="::Program:MpDelta3Axis_0.X" />
+      <Property ID="TrcDataPoint[2]" Value="::Program:MpDelta3Axis_0.Y" />
+      <Property ID="TrcDataPoint[3]" Value="::Program:MpDelta3Axis_0.Z" />
+    </Group>
+  </Element>
+</Configuration>
