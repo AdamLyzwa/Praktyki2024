@@ -1,0 +1,7 @@
+Binaries/
+Diagnosis/
+Temp/
+*.isopen
+domzalskis.set
+/*.set
+*RevInfo.var 
