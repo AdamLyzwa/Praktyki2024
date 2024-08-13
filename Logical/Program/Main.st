@@ -1,6 +1,6 @@
 PROGRAM _INIT
      
-
+(*
 	MpDelta3Axis_0.Enable := TRUE; 
 	MpDelta3Axis_0.Override := 100.0; 
 	DeltaParameters.ProgramName := 'Robotic.st';    //File stored on FileDevice
@@ -11,11 +11,11 @@ PROGRAM _INIT
 	
 	AxisParam_1.Velocity := 10;
 	AxisParam_1.Distance := 50;
-	AxisParam_1.Position := 100;
+	AxisParam_1.Position := 100;*)
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	
+		(*
     MpDelta3Axis_0.Parameters := ADR(DeltaParameters); 
 
 	FB_Axis_1.MpLink := ADR(gAxisQ1);
@@ -36,11 +36,11 @@ PROGRAM _CYCLIC
 	VisuPos[1] := LREAL_TO_REAL(MpDelta3Axis_0.Info.JointAxisPosition[1]);
 	VisuPos[2] := LREAL_TO_REAL(MpDelta3Axis_0.Info.JointAxisPosition[2]);
 
-	(*
+
 	VisuPos[0] := LREAL_TO_REAL(FB_Axis_1.Position);
 	VisuPos[1] := LREAL_TO_REAL(FB_Axis_2.Position);
 	VisuPos[2] := LREAL_TO_REAL(FB_Axis_3.Position);
-	*)
+
 
 	
 	IF MpDelta3Axis_0.Error THEN
@@ -83,11 +83,11 @@ PROGRAM _CYCLIC
 			END_IF;
 		  
 	END_CASE;
-     
+     	 	*)
 END_PROGRAM
 
 PROGRAM _EXIT
 	(* Insert code here *)
-	 
+
 END_PROGRAM
 

@@ -6,7 +6,6 @@
     <Object Type="File" Description="Hardware topology">Hardware.hwl</Object>
     <Object Type="Cpu">X20CP0484_1</Object>
     <Object Type="File">Hardware.jpg</Object>
-    <Object Type="Cpu" Description="My first pick and place project (MpPick with Delta robot)">CPU</Object>
   </Objects>
   <Sources Download="false" IncludeUpgrades="true" Mode="ProjectTransfer" Option="Complete" />
 </Configuration>

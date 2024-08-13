@@ -1,4 +1,4 @@
-VAR
+VAR(*
 	FB_Axis_2 : MpAxisBasic;
 	FB_Axis_3 : MpAxisBasic;
 	FB_Axis_1 : MpAxisBasic;
@@ -10,5 +10,5 @@ VAR
 	DeltaParameters : MpDelta3AxisParType;
 	VisuPos : ARRAY[0..2] OF REAL;
 	diDeltaOn : BOOL;
-	diDeltaMove : BOOL;
+	diDeltaMove : BOOL;*)
 END_VAR

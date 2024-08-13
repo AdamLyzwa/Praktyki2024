@@ -6,7 +6,7 @@ VAR
 	ReadyPlaceReg : BOOL := FALSE;
 	ReadyToStart : BOOL := FALSE;
 	PickConveyorPosition : LREAL;
-	PickConveyorLength : LREAL := 2000; (*must be the same as pick conveyor length in MpPick configuration*)
+	PickConveyorLength : {REDUND_UNREPLICABLE} LREAL := 2000; (*must be the same as pick conveyor length in MpPick configuration*)
 	PlaceConveyorPosition : LREAL;
-	PlaceConveyorLength : LREAL := 2000; (*must be the same as place conveyor length in MpPick configuration*)
+	PlaceConveyorLength : {REDUND_UNREPLICABLE} LREAL := 2000; (*must be the same as place conveyor length in MpPick configuration*)
 END_VAR
