@@ -6,6 +6,7 @@
       <Property ID="StandardFrameName" Value="ConveyorPick" />
       <Property ID="Length" Value="2000" />
       <Property ID="Width" Value="250" />
+      <Property ID="Height" Value="100" />
       <Selector ID="MotionSource" Value="Axis">
         <Property ID="AxisRef" Value="gAxis_1" />
         <Selector ID="MovementLimits" Value="UseAxisLimits">
@@ -25,8 +26,17 @@
     <Selector ID="Alarms" Value="None" />
   </Element>
   <Element ID="gPlaceRegister" Type="pickregister">
-    <Selector ID="Type" Value="StaticPosition">
+    <Selector ID="Type" Value="LinearConveyor">
       <Property ID="StandardFrameName" Value="ConveyorPlace" />
+      <Property ID="Length" Value="2000" />
+      <Property ID="Width" Value="250.0" />
+      <Property ID="Height" Value="100" />
+      <Selector ID="MotionSource" Value="Axis">
+        <Property ID="AxisRef" Value="gAxis_2" />
+        <Selector ID="MovementLimits" Value="UseAxisLimits">
+          <Selector ID="Direction" Value="Bidirectional" />
+        </Selector>
+      </Selector>
     </Selector>
     <Selector ID="SceneViewerObject" Value="Used">
       <Selector ID="Content">

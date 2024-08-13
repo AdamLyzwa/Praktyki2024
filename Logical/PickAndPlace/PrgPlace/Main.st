@@ -63,7 +63,11 @@ PROGRAM _CYCLIC
         (* We need to create positions (place holders) on place conveyor where to place picked objects *)
         P_CREATE_OBJECTS:
         
-            ElapsedDistance := DistanceOverPeriod(PlaceConveyorPosition, LastPlaceHolderConveyorPosition, PlaceConveyorLength);
+			IF (PickConveyorPosition > LastPlaceHolderConveyorPosition) THEN
+				ElapsedDistance := PickConveyorPosition - LastPlaceHolderConveyorPosition;
+			ELSE 
+				ElapsedDistance := PickConveyorLength - (LastPlaceHolderConveyorPosition - PickConveyorPosition);   
+			END_IF
             
             IF (ElapsedDistance >= PlaceHoldersSpacing) THEN
         

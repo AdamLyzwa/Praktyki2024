@@ -60,7 +60,11 @@ PROGRAM _CYCLIC
 			
         C_PROCESSING: (* now create products on moving conveyor for picking *)
             
-            ElapsedDistance := DistanceOverPeriod(PickConveyorPosition, LastProductConveyorPosition, PickConveyorLength);
+			IF (PickConveyorPosition > LastProductConveyorPosition) THEN
+				ElapsedDistance := PickConveyorPosition - LastProductConveyorPosition;
+			ELSE 
+				ElapsedDistance := PickConveyorLength - (LastProductConveyorPosition - PickConveyorPosition);   
+			END_IF
             
             IF (ElapsedDistance >= ProductSpacing) THEN
                 

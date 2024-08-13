@@ -7,7 +7,6 @@
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="File">Robotic.st</Object>
     <Object Type="Program" Language="IEC">Program</Object>
-    <Object Type="Program" Language="IEC">Manual_Mode</Object>
     <Object Type="Package">PickAndPlace</Object>
   </Objects>
 </Package>

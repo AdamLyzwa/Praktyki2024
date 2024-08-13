@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/13/2024 09:29:07" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/13/2024 13:05:23" />
   </TimeStamps>
   <Modules>
     <Module Name="X20BB57" Type="X20BB57" X="95" Y="100" />
@@ -12,24 +12,15 @@
     <Module Name="Motor1" Type="8JSA24.E8080D000-0" X="122" Y="458" />
     <Module Name="DeltaAxis1_2" Type="80VD100PD.C000-14" X="135" Y="249" />
     <Module Name="Motor2" Type="8JSA24.E8080D000-0" X="135" Y="567" />
-    <Module Name="DeltaAxis3" Type="80VD100PD.C000-01" X="255" Y="249" />
+    <Module Name="DeltaAxis3_4" Type="80VD100PD.C000-01" X="255" Y="249" />
     <Module Name="Motor3" Type="8JSA24.E8080D000-0" X="255" Y="493" />
-    <Module Name="Motor4" Type="8JSA24.E8080D000-0" X="482.344025" Y="473" />
+    <Module Name="Motor4" Type="8JSA24.E8080D000-0" X="482" Y="473" />
+    <Module Name="80VD100PD.C000-01" Type="80VD100PD.C000-01" X="15" Y="299" />
+    <Module Name="8JSA24.E8080D000-0" Type="8JSA24.E8080D000-0" X="-94" Y="542" />
+    <Module Name="8JSA24.E8080D000-0a" Type="8JSA24.E8080D000-0" X="15" Y="617" />
   </Modules>
   <Links>
-    <Link From="DeltaAxis1_2" To="X20CP0484_1" FromPort="PLK1" ToPort="IF3" IsRoutedByUser="False">
-      <Point X="109" Y="173" />
-      <Point X="109" Y="173" />
-      <Point X="94" Y="173" />
-      <Point X="85" Y="173" />
-      <Point X="85" Y="205" />
-      <Point X="205" Y="205" />
-      <Point X="205" Y="308" />
-      <Point X="193" Y="308" />
-      <Point X="174" Y="308" />
-      <Point X="174" Y="323" />
-    </Link>
-    <Link From="DeltaAxis1_2" To="DeltaAxis3" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+    <Link From="DeltaAxis1_2" To="DeltaAxis3_4" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
       <Point X="184" Y="323" />
       <Point X="184" Y="323" />
       <Point X="193" Y="323" />
@@ -85,7 +76,7 @@
       <Point X="184.5" Y="573.1" />
       <Point X="184.5" Y="573.1" />
     </Link>
-    <Link From="DeltaAxis3" To="Motor3" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
+    <Link From="DeltaAxis3_4" To="Motor3" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
       <Point X="263" Y="302" />
       <Point X="263" Y="302" />
       <Point X="254" Y="302" />
@@ -96,18 +87,18 @@
       <Point X="276.5" Y="499.1" />
       <Point X="276.5" Y="499.1" />
     </Link>
-    <Link From="DeltaAxis3" To="Motor4" FromPort="EC2" ToPort="EC" IsRoutedByUser="False">
+    <Link From="DeltaAxis3_4" To="Motor4" FromPort="EC2" ToPort="EC" IsRoutedByUser="False">
       <Point X="277" Y="302" />
       <Point X="277" Y="317" />
       <Point X="254" Y="317" />
       <Point X="245" Y="317" />
       <Point X="245" Y="409" />
-      <Point X="503.844025" Y="409" />
-      <Point X="503.844025" Y="472.1" />
-      <Point X="503.844025" Y="479.1" />
-      <Point X="503.844025" Y="479.1" />
+      <Point X="503.5" Y="409" />
+      <Point X="503.5" Y="472.1" />
+      <Point X="503.5" Y="479.1" />
+      <Point X="503.5" Y="479.1" />
     </Link>
-    <Link From="DeltaAxis3" To="Motor3" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
+    <Link From="DeltaAxis3_4" To="Motor3" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
       <Point X="274" Y="373" />
       <Point X="274" Y="373" />
       <Point X="274" Y="384" />
@@ -117,14 +108,76 @@
       <Point X="304.5" Y="499.1" />
       <Point X="304.5" Y="499.1" />
     </Link>
-    <Link From="DeltaAxis3" To="Motor4" FromPort="MT2" ToPort="MT" IsRoutedByUser="False">
+    <Link From="DeltaAxis3_4" To="Motor4" FromPort="MT2" ToPort="MT" IsRoutedByUser="False">
       <Point X="299" Y="373" />
       <Point X="299" Y="373" />
       <Point X="313" Y="373" />
-      <Point X="531.844" Y="373" />
-      <Point X="531.844" Y="472.1" />
-      <Point X="531.844" Y="479.1" />
-      <Point X="531.844" Y="479.1" />
+      <Point X="531.5" Y="373" />
+      <Point X="531.5" Y="472.1" />
+      <Point X="531.5" Y="479.1" />
+      <Point X="531.5" Y="479.1" />
+    </Link>
+    <Link From="DeltaAxis1_2" To="80VD100PD.C000-01" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="174" Y="323" />
+      <Point X="174" Y="308" />
+      <Point X="193" Y="308" />
+      <Point X="205" Y="308" />
+      <Point X="205" Y="395" />
+      <Point X="125" Y="395" />
+      <Point X="125" Y="373" />
+      <Point X="73" Y="373" />
+      <Point X="64" Y="373" />
+      <Point X="64" Y="373" />
+    </Link>
+    <Link From="X20CP0484_1" To="80VD100PD.C000-01" FromPort="IF3" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="109" Y="173" />
+      <Point X="109" Y="173" />
+      <Point X="94" Y="173" />
+      <Point X="85" Y="173" />
+      <Point X="85" Y="358" />
+      <Point X="73" Y="358" />
+      <Point X="54" Y="358" />
+      <Point X="54" Y="373" />
+    </Link>
+    <Link From="80VD100PD.C000-01" To="8JSA24.E8080D000-0" FromPort="MT1" ToPort="MT" IsRoutedByUser="False">
+      <Point X="34" Y="423" />
+      <Point X="34" Y="423" />
+      <Point X="34" Y="434" />
+      <Point X="34" Y="445" />
+      <Point X="-44.5" Y="445" />
+      <Point X="-44.5" Y="541.1" />
+      <Point X="-44.5" Y="548.1" />
+      <Point X="-44.5" Y="548.1" />
+    </Link>
+    <Link From="80VD100PD.C000-01" To="8JSA24.E8080D000-0a" FromPort="MT2" ToPort="MT" IsRoutedByUser="False">
+      <Point X="59" Y="423" />
+      <Point X="59" Y="423" />
+      <Point X="59" Y="434" />
+      <Point X="59" Y="445" />
+      <Point X="64.5" Y="445" />
+      <Point X="64.5" Y="616.1" />
+      <Point X="64.5" Y="623.1" />
+      <Point X="64.5" Y="623.1" />
+    </Link>
+    <Link From="8JSA24.E8080D000-0" To="80VD100PD.C000-01" FromPort="EC" ToPort="EC1" IsRoutedByUser="False">
+      <Point X="-72.5" Y="548.1" />
+      <Point X="-72.5" Y="548.1" />
+      <Point X="-72.5" Y="541.1" />
+      <Point X="-72.5" Y="352" />
+      <Point X="14" Y="352" />
+      <Point X="23" Y="352" />
+      <Point X="23" Y="352" />
+    </Link>
+    <Link From="8JSA24.E8080D000-0a" To="80VD100PD.C000-01" FromPort="EC" ToPort="EC2" IsRoutedByUser="False">
+      <Point X="36.5" Y="623.1" />
+      <Point X="36.5" Y="623.1" />
+      <Point X="36.5" Y="616.1" />
+      <Point X="36.5" Y="605" />
+      <Point X="5" Y="605" />
+      <Point X="5" Y="367" />
+      <Point X="14" Y="367" />
+      <Point X="37" Y="367" />
+      <Point X="37" Y="352" />
     </Link>
   </Links>
   <InfoElements />
