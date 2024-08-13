@@ -6,6 +6,7 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Program" Source="Program.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Manual_Mod" Source="Manual_Mode.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <Libraries>
     <LibraryObject Name="McBase" Source="Libraries.McBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
@@ -21,5 +22,7 @@
     <LibraryObject Name="FileIO" Source="Libraries.FileIO.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="runtime" Source="Libraries.runtime.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpAxis" Source="Libraries.MpAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpPick" Source="Libraries.MpPick.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="McTrkPath" Source="Libraries.McTrkPath.lby" Memory="UserROM" Language="binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

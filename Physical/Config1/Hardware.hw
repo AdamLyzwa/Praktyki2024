@@ -129,6 +129,8 @@
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Connection Connector="EC1" TargetModule="Motor3" TargetConnector="EC" />
+    <Connection Connector="EC2" TargetModule="Motor4" TargetConnector="EC" />
+    <Connection Connector="MT2" TargetModule="Motor4" TargetConnector="MT" />
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposMicroDConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ3" />
@@ -186,7 +188,7 @@
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
     <Parameter ID="ExternalEncoderAxis" Location="DriveConfiguration/Channel[1]" Value="NotUsed" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxis_1" />
     <Parameter ID="MechanicalElementsIsInvisible" Location="DriveConfiguration/Channel[2]/RealAxis" Value="0" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
@@ -253,6 +255,10 @@
   <Module Name="Motor3" Type="8JSA24.E8080D000-0" Version="1.0.6.30">
     <Connection Connector="EC" TargetModule="DeltaAxis3" TargetConnector="EC1" />
     <Connection Connector="MT" TargetModule="DeltaAxis3" TargetConnector="MT1" />
+  </Module>
+  <Module Name="Motor4" Type="8JSA24.E8080D000-0" Version="1.0.6.30">
+    <Connection Connector="EC" TargetModule="DeltaAxis3" TargetConnector="EC2" />
+    <Connection Connector="MT" TargetModule="DeltaAxis3" TargetConnector="MT2" />
   </Module>
   <Module Name="X20BB57" Type="X20BB57" Version="1.2.0.0" />
   <Module Name="X20CP0484_1" Type="X20CP0484-1" Version="1.4.0.0">

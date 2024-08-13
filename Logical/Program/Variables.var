@@ -1,5 +1,9 @@
 VAR
+	FB_Axis_2 : MpAxisBasic;
+	FB_Axis_3 : MpAxisBasic;
 	FB_Axis_1 : MpAxisBasic;
+	AxisParam_2 : MpAxisBasicParType;
+	AxisParam_3 : MpAxisBasicParType;
 	AxisParam_1 : MpAxisBasicParType;
 	DeltaStep : DeltaState;
 	MpDelta3Axis_0 : MpDelta3Axis;
