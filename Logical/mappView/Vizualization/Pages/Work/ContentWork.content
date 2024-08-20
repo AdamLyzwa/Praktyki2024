@@ -7,34 +7,34 @@
           <Widgets>
             <Widget xsi:type="widgets.brease.TabControl" id="TabControl3" top="0" left="0" width="1320" height="680" zIndex="0">
               <Widgets>
-                <Widget xsi:type="widgets.brease.TabItem" id="Joint" left="0" zIndex="0" text="Joint" textAlign="center">
+                <Widget xsi:type="widgets.brease.TabItem" id="XYZ" left="0" zIndex="0" text="XYZ" textAlign="center">
                   <Widgets>
-                    <Widget xsi:type="widgets.brease.Button" id="Button1" top="50" left="280" width="60" height="50" zIndex="0" text="+" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="20" width="120" height="110" zIndex="1" text="AXIS 1" />
-                    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="50" left="100" width="140" height="50" zIndex="2" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="50" left="480" width="140" height="48" zIndex="3" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="100" width="140" height="50" zIndex="4" text="Actual Position" />
-                    <Widget xsi:type="widgets.brease.Button" id="Button2" top="50" left="380" width="60" height="50" zIndex="5" text="-" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label3" top="0" left="480" width="140" height="50" zIndex="6" text="Input Position" />
-                    <Widget xsi:type="widgets.brease.Button" id="Button3" top="180" left="280" width="60" height="50" zIndex="7" text="+" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label4" top="150" left="20" width="120" height="110" zIndex="8" text="AXIS 2" />
-                    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="180" left="100" width="140" height="50" zIndex="9" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="180" left="480" width="140" height="49" zIndex="10" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label5" top="140" left="100" width="140" height="50" zIndex="11" text="Actual Position" />
-                    <Widget xsi:type="widgets.brease.Button" id="Button4" top="180" left="380" width="60" height="50" zIndex="12" text="-" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label6" top="120" left="480" width="140" height="71" zIndex="13" text="Input Position" />
-                    <Widget xsi:type="widgets.brease.Button" id="Button5" top="300" left="280" width="60" height="50" zIndex="14" text="+" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label7" top="270" left="20" width="120" height="110" zIndex="15" text="AXIS 2" />
-                    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="300" left="100" width="140" height="50" zIndex="16" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label8" top="260" left="100" width="140" height="50" zIndex="17" text="Actual Position" />
-                    <Widget xsi:type="widgets.brease.Button" id="Button6" top="300" left="380" width="60" height="50" zIndex="18" text="-" />
-                    <Widget xsi:type="widgets.brease.Label" id="Label9" top="240" left="480" width="140" height="71" zIndex="19" text="Input Position" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="300" left="480" width="140" height="49" zIndex="20" />
-                    <Widget xsi:type="widgets.brease.Button" id="Button7" top="420" left="460" width="160" height="51" zIndex="21" text="Apply Changes" />
-                    <Widget xsi:type="widgets.brease.Button" id="Button8" top="480" left="100" width="160" height="131" zIndex="22" text="Emergency STOP" backColor="rgba(255, 0, 0, 1)" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button1" top="50" left="280" width="60" height="50" zIndex="0" text="-" />
+                    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="50" left="100" width="140" height="50" zIndex="1" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="50" left="480" width="140" height="48" zIndex="2" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label2" top="10" left="100" width="140" height="50" zIndex="3" text="Actual Position" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button2" top="50" left="380" width="60" height="50" zIndex="4" text="+" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label3" top="0" left="480" width="140" height="50" zIndex="5" text="Input Position" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button3" top="180" left="280" width="60" height="50" zIndex="6" text="-" />
+                    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="180" left="100" width="140" height="50" zIndex="7" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="180" left="480" width="140" height="49" zIndex="8" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label5" top="140" left="100" width="140" height="50" zIndex="9" text="Actual Position" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button4" top="180" left="380" width="60" height="50" zIndex="10" text="+" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label6" top="120" left="480" width="140" height="71" zIndex="11" text="Input Position" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button5" top="300" left="280" width="60" height="50" zIndex="12" text="-" />
+                    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="300" left="100" width="140" height="50" zIndex="13" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label8" top="260" left="100" width="140" height="50" zIndex="14" text="Actual Position" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button6" top="300" left="380" width="60" height="50" zIndex="15" text="+" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label9" top="240" left="480" width="140" height="71" zIndex="16" text="Input Position" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="300" left="480" width="140" height="49" zIndex="17" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button7" top="420" left="460" width="160" height="51" zIndex="18" text="Apply Changes" />
+                    <Widget xsi:type="widgets.brease.Button" id="Button8" top="480" left="100" width="160" height="131" zIndex="19" text="Emergency STOP" backColor="rgba(255, 0, 0, 1)" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label19" top="20" left="20" width="120" height="110" zIndex="20" text="X position" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label20" top="150" left="20" width="120" height="110" zIndex="21" text="Y position" />
+                    <Widget xsi:type="widgets.brease.Label" id="Label21" top="270" left="20" width="120" height="110" zIndex="22" text="Z position" />
                   </Widgets>
                 </Widget>
-                <Widget xsi:type="widgets.brease.TabItem" id="TabItem7" left="0" zIndex="1" text="XYZ">
+                <Widget xsi:type="widgets.brease.TabItem" id="TabItem7" left="0" zIndex="1" text="JOINTS">
                   <Widgets>
                     <Widget xsi:type="widgets.brease.Button" id="Button9" top="70" left="280" width="60" height="50" zIndex="0" text="+" />
                     <Widget xsi:type="widgets.brease.Label" id="Label10" top="40" left="20" width="120" height="110" zIndex="1" text="X position" />

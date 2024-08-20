@@ -16,4 +16,10 @@ VAR
 	Y : LREAL;
 	Z : LREAL;
 	saveChanges : BOOL := FALSE;
+	setAxis1 : LREAL;
+	setAxis2 : LREAL;
+	setAxis3 : LREAL;
+	axis1 : LREAL;
+	axis2 : LREAL;
+	axis3 : LREAL;
 END_VAR

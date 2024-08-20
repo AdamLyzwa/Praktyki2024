@@ -1,0 +1,6 @@
+VAR
+	KrokXYZ : Krok;
+	DeltaParameters : MpDelta4AxisParType;
+	MpDelta4Axis_0 : MpDelta4Axis;
+	P1 : McPointType;
+END_VAR

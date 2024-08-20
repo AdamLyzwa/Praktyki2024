@@ -2,42 +2,28 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/18/2024 15:24:21" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/20/2024 12:23:14" />
   </TimeStamps>
   <Modules>
     <Module Name="5APC3100_KBU1_000" Type="5APC3100.KBU1-000" X="172" Y="173" />
-    <Module Name="5ACCIF02.FPLK-000" Type="5ACCIF02.FPLK-000" X="177.8" Y="196" />
-    <Module Name="X20BB80" Type="X20BB80" X="410" Y="230" />
-    <Module Name="X20PS9400" Type="X20PS9400" X="435" Y="230" />
-    <Module Name="X20TB12" Type="X20TB12" X="435" Y="257" />
-    <Module Name="X20BC0083" Type="X20BC0083" X="410" Y="230" />
+    <Module Name="5AC901.IPLK-00" Type="5AC901.IPLK-00" X="177.8" Y="206" />
+    <Module Name="5AC901.IUPS-01" Type="5AC901.IUPS-01" X="177.8" Y="183" />
     <Module Name="80VD100PD.C000-14" Type="80VD100PD.C000-14" X="314" Y="345" />
     <Module Name="80VD100PD.C000-14a" Type="80VD100PD.C000-14" X="478" Y="378" />
     <Module Name="8LVA23.B1030D200-0" Type="8LVA23.B1030D200-0" X="214" Y="645" />
     <Module Name="8LVA23.B1030D200-0a" Type="8LVA23.B1030D200-0" X="340" Y="645" />
     <Module Name="8LVA23.B1030D200-0b" Type="8LVA23.B1030D200-0" X="454" Y="645" />
     <Module Name="8LVA23.B1030D200-0c" Type="8LVA23.B1030D200-0" X="558" Y="645" />
+    <Module Name="VSS112R24.042P-000" Type="VSS112R24.042P-000" X="602.9" Y="244" />
+    <Module Name="X20BB80a" Type="X20BB80" X="314" Y="31" />
+    <Module Name="X20BM11a" Type="X20BM11" X="352" Y="31" />
+    <Module Name="X20DO8322" Type="X20DO8322" X="352" Y="31" />
+    <Module Name="X20TB12b" Type="X20TB12" X="352" Y="58" />
+    <Module Name="X20PS9400a" Type="X20PS9400" X="339" Y="31" />
+    <Module Name="X20TB12a" Type="X20TB12" X="339" Y="58" />
+    <Module Name="X20BC0083a" Type="X20BC0083" X="314" Y="31" />
   </Modules>
   <Links>
-    <Link From="5ACCIF02.FPLK-000" To="X20BC0083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
-      <Point X="218.900009" Y="204" />
-      <Point X="218.900009" Y="204" />
-      <Point X="225.900009" Y="204" />
-      <Point X="235" Y="204" />
-      <Point X="235" Y="305.1" />
-      <Point X="409" Y="305.1" />
-      <Point X="424" Y="305.1" />
-      <Point X="424" Y="305.1" />
-    </Link>
-    <Link From="80VD100PD.C000-14" To="X20BC0083" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
-      <Point X="353.5" Y="419.8889" />
-      <Point X="353.5" Y="404.8889" />
-      <Point X="372.5" Y="404.8889" />
-      <Point X="424" Y="404.8889" />
-      <Point X="424" Y="330.1" />
-      <Point X="424" Y="320.1" />
-      <Point X="424" Y="320.1" />
-    </Link>
     <Link From="80VD100PD.C000-14" To="80VD100PD.C000-14a" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
       <Point X="363.5" Y="419.8889" />
       <Point X="363.5" Y="419.8889" />
@@ -131,6 +117,36 @@
       <Point X="607.5" Y="644.1" />
       <Point X="607.5" Y="651.1" />
       <Point X="607.5" Y="651.1" />
+    </Link>
+    <Link From="80VD100PD.C000-14a" To="VSS112R24.042P-000" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="527" Y="452" />
+      <Point X="527" Y="452" />
+      <Point X="536" Y="452" />
+      <Point X="620.9" Y="452" />
+      <Point X="620.9" Y="367" />
+      <Point X="620.9" Y="362" />
+      <Point X="620.9" Y="362" />
+    </Link>
+    <Link From="5AC901.IPLK-00" To="X20BC0083a" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="218.8" Y="214" />
+      <Point X="218.8" Y="214" />
+      <Point X="225.8" Y="214" />
+      <Point X="235" Y="214" />
+      <Point X="235" Y="106" />
+      <Point X="313" Y="106" />
+      <Point X="328" Y="106" />
+      <Point X="328" Y="106" />
+    </Link>
+    <Link From="80VD100PD.C000-14" To="X20BC0083a" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="353" Y="419" />
+      <Point X="353" Y="404" />
+      <Point X="372" Y="404" />
+      <Point X="378" Y="404" />
+      <Point X="378" Y="335" />
+      <Point X="328" Y="335" />
+      <Point X="328" Y="131" />
+      <Point X="328" Y="121" />
+      <Point X="328" Y="121" />
     </Link>
   </Links>
   <InfoElements />

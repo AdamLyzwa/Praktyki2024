@@ -13,7 +13,15 @@
         <Variable Name="setX" />
         <Variable Name="setY" />
         <Variable Name="setZ" />
+        <Variable Name="saveChanges" />
       </GlobalVariables>
+      <Task Name="TCPXYZ">
+        <Variable Name="MpDelta4Axis_0">
+          <Variable Name="Info">
+            <Variable Name="JointAxisPosition" RecursiveEnable="2" />
+          </Variable>
+        </Variable>
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>
