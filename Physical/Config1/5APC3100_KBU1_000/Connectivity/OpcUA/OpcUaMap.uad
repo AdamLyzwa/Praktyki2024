@@ -14,12 +14,19 @@
         <Variable Name="setY" />
         <Variable Name="setZ" />
         <Variable Name="saveChanges" />
+        <Variable Name="setAxis1" />
+        <Variable Name="setAxis2" />
+        <Variable Name="setAxis3" />
+        <Variable Name="TCP" />
       </GlobalVariables>
       <Task Name="TCPXYZ">
         <Variable Name="MpDelta4Axis_0">
           <Variable Name="Info">
             <Variable Name="JointAxisPosition" RecursiveEnable="2" />
           </Variable>
+          <Variable Name="X" />
+          <Variable Name="Y" />
+          <Variable Name="Z" />
         </Variable>
       </Task>
     </Module>

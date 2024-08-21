@@ -22,4 +22,6 @@ VAR
 	axis1 : LREAL;
 	axis2 : LREAL;
 	axis3 : LREAL;
+	TCP : BOOL := TRUE;
+	TEST : BOOL := TRUE;
 END_VAR

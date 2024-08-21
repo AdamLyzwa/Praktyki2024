@@ -4,8 +4,8 @@ VAR
 	AxisParam3 : MpAxisBasicParType;
 	AxisParam4 : MpAxisBasicParType;
 	FB_Axis1 : MpAxisBasic;
-	FB_Axis4 : MpAxisBasic;
 	FB_Axis2 : MpAxisBasic;
 	FB_Axis3 : MpAxisBasic;
+	FB_Axis4 : MpAxisBasic;
 	KrokXYZ : Krok;
 END_VAR

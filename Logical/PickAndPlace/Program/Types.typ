@@ -7,6 +7,7 @@ TYPE
 		PROG,
 		CHECK,
 		RUCH,
-		FLAGI
+		FLAGI,
+		WAIT
 		);
 END_TYPE

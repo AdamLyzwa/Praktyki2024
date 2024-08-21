@@ -3,6 +3,7 @@
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
     <Task Name="TCPXYZ" Source="PickAndPlace.TCPXYZ.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Program" Source="PickAndPlace.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
@@ -52,6 +53,9 @@
     <BinaryObject Name="Settings" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_11" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_10" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Settings_1" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="viApp" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="viComp" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="McBase" Source="Libraries.McBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
