@@ -8,7 +8,7 @@
       <Property ID="MeasurementResolutionIsReadOnly" Value="0" />
       <Property ID="MeasurementResolution" Value="0.01" />
       <Property ID="CountDirectionIsReadOnly" Value="0" />
-      <Property ID="CountDirection" Value="Standard" />
+      <Property ID="CountDirection" Value="Inverse" />
       <Group ID="PeriodSettings">
         <Property ID="Period" Value="2000" />
       </Group>
@@ -29,12 +29,12 @@
       <Property ID="AccelerationIsReadOnly" Value="0" />
       <Selector ID="Acceleration">
         <Property ID="AccelerationMax" Value="3.4E38" />
-        <Property ID="Acceleration" Value="100" />
+        <Property ID="Acceleration" Value="5000" />
       </Selector>
       <Property ID="DecelerationIsReadOnly" Value="0" />
       <Selector ID="Deceleration">
         <Property ID="DecelerationMax" Value="3.4E38" />
-        <Property ID="Deceleration" Value="100" />
+        <Property ID="Deceleration" Value="50000" />
       </Selector>
     </Selector>
     <Selector ID="Alarms" Value="None" />

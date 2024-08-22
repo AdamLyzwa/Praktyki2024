@@ -1,7 +1,4 @@
 VAR
-	KrokXYZ : Krok;
-	DeltaParameters : MpDelta4AxisParType;
-	MpDelta4Axis_0 : MpDelta4Axis;
 	AxisParam1 : MpAxisBasicParType;
 	AxisParam2 : MpAxisBasicParType;
 	AxisParam3 : MpAxisBasicParType;
@@ -10,5 +7,5 @@ VAR
 	FB_Axis2 : MpAxisBasic;
 	FB_Axis3 : MpAxisBasic;
 	FB_Axis4 : MpAxisBasic;
-	P1 : McPointType;
+	KrokXYZ : Krok;
 END_VAR

@@ -13,7 +13,9 @@
   <BindingsSets>
     <BindingsSet refId="ContentWork_binding" />
   </BindingsSets>
-  <EventBindingsSets />
+  <EventBindingsSets>
+    <EventBindingsSet refId="ContentWork_eventbinding" />
+  </EventBindingsSets>
   <Dialogs />
   <Contents>
     <Content refId="ContentNavi" />

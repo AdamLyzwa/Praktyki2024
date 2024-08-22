@@ -6,6 +6,8 @@ TYPE
 		POWER,
 		PROG,
 		CHECK,
-		RUCH
+		RUCH,
+		FLAGI,
+		WAIT
 		);
 END_TYPE

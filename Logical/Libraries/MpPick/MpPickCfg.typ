@@ -247,18 +247,9 @@ TYPE
 		Type : MpPRTLCMSPPVMLIAccEnum; (*Acceleration selector setting*)
 		Basic : MpPRTLCMSPPVMLIAccBasicType; (*Type mcPRLinMotSrcPPVMLIA_BASIC settings*)
 	END_STRUCT;
-	MpPRTLCMSPPVMLIDirEnum :
-		( (*Direction selector setting*)
-		mcPRLinMotSrcPPVMLID_BIDIR := 0, (*Bidir - Conveyor movements are permitted in both positive and negative x-direction*)
-		mcPRLinMotSrcPPVMLID_POS_ONLY := 1 (*Positive Only - While the pick-and-place process has started, conveyor movements in the negative x-direction are not permitted*)
-		);
-	MpPRTLCMSPPVMLIDirType : STRUCT (*Permitted direction of movement during pick-and-place process*)
-		Type : MpPRTLCMSPPVMLIDirEnum; (*Direction selector setting*)
-	END_STRUCT;
 	MpPRTLCMSPPVMLIType : STRUCT (*Type mcPRLinMotSrcPPVML_INT settings*)
 		Velocity : MpPRTLCMSPPVMLIVelType; (*Limits for velocity*)
 		Acceleration : MpPRTLCMSPPVMLIAccType; (*Limits for acceleration*)
-		Direction : MpPRTLCMSPPVMLIDirType; (*Permitted direction of movement during pick-and-place process*)
 	END_STRUCT;
 	MpPRLinMotSrcPosPVMoveLimType : STRUCT (*Velocity, acceleration and deceleration limits to be considered*)
 		Type : MpPRLinMotSrcPosPVMoveLimEnum; (*Movement limits selector setting*)
@@ -298,17 +289,6 @@ TYPE
 		mcPRLinMotSrcAML_USE_AX_LIM := 0, (*Use axis limits - Internal definition of limits*)
 		mcPRLinMotSrcAML_INT := 1 (*Internal - Internal definition of limits*)
 		);
-	MpPRTLCMSAMLUALDirEnum :
-		( (*Direction selector setting*)
-		mcPRLinMotSrcAMLUALD_BIDIR := 0, (*Bidir - Conveyor movements are permitted in both positive and negative x-direction*)
-		mcPRLinMotSrcAMLUALD_POS_ONLY := 1 (*Positive Only - While the pick-and-place process has started, conveyor movements in the negative x-direction are not permitted*)
-		);
-	MpPRTLCMSAMLUALDirType : STRUCT (*Permitted direction of movement during pick-and-place process*)
-		Type : MpPRTLCMSAMLUALDirEnum; (*Direction selector setting*)
-	END_STRUCT;
-	MpPRTLCMSAMLUALType : STRUCT (*Type mcPRLinMotSrcAML_USE_AX_LIM settings*)
-		Direction : MpPRTLCMSAMLUALDirType; (*Permitted direction of movement during pick-and-place process*)
-	END_STRUCT;
 	MpPRTLCMSAMLIVelEnum :
 		( (*Velocity selector setting*)
 		mcPRLinMotSrcAMLIV_BASIC := 0 (*Basic -*)
@@ -331,22 +311,12 @@ TYPE
 		Type : MpPRTLCMSAMLIAccEnum; (*Acceleration selector setting*)
 		Basic : MpPRTLCMSAMLIAccBasicType; (*Type mcPRLinMotSrcAMLIA_BASIC settings*)
 	END_STRUCT;
-	MpPRTLCMSAMLIDirEnum :
-		( (*Direction selector setting*)
-		mcPRLinMotSrcAMLID_BIDIR := 0, (*Bidir - Conveyor movements are permitted in both positive and negative x-direction*)
-		mcPRLinMotSrcAMLID_POS_ONLY := 1 (*Positive Only - While the pick-and-place process has started, conveyor movements in the negative x-direction are not permitted*)
-		);
-	MpPRTLCMSAMLIDirType : STRUCT (*Permitted direction of movement during pick-and-place process*)
-		Type : MpPRTLCMSAMLIDirEnum; (*Direction selector setting*)
-	END_STRUCT;
 	MpPRTLCMSAMLIType : STRUCT (*Type mcPRLinMotSrcAML_INT settings*)
 		Velocity : MpPRTLCMSAMLIVelType; (*Limits for velocity*)
 		Acceleration : MpPRTLCMSAMLIAccType; (*Limits for acceleration*)
-		Direction : MpPRTLCMSAMLIDirType; (*Permitted direction of movement during pick-and-place process*)
 	END_STRUCT;
 	MpPRLinMotSrcAxMoveLimType : STRUCT (*Velocity, acceleration and deceleration limits to be considered*)
 		Type : MpPRLinMotSrcAxMoveLimEnum; (*Movement limits selector setting*)
-		UseAxisLimits : MpPRTLCMSAMLUALType; (*Type mcPRLinMotSrcAML_USE_AX_LIM settings*)
 		Internal : MpPRTLCMSAMLIType; (*Type mcPRLinMotSrcAML_INT settings*)
 	END_STRUCT;
 	MpPRLinMotSrcAxPrepEnum :
@@ -369,7 +339,7 @@ TYPE
 		MovementLimits : MpPRLinMotSrcAxMoveLimType; (*Velocity, acceleration and deceleration limits to be considered*)
 		Preparation : MpPRLinMotSrcAxPrepType; (*Preparation of the input signal from Motion source*)
 	END_STRUCT;
-	MpPRLinMotSrcType : STRUCT (*Source describing the conveyor movement (along the x-direction)*)
+	MpPRLinMotSrcType : STRUCT (*Source describing the conveyor movement*)
 		Type : MpPRLinMotSrcEnum; (*Motion source selector setting*)
 		PositionProcessVariable : MpPRLinMotSrcPosPVType; (*Type mcPRLinMotSrc_POS_PROC_VAR settings*)
 		Axis : MpPRLinMotSrcAxType; (*Type mcPRLinMotSrc_AX settings*)
@@ -381,7 +351,7 @@ TYPE
 		Height : LREAL; (*Height of the register (Along the z-direction of the defined standard frame). Defines the maximum offset in z-direction for objects to be created [Measurement units]*)
 		ObjectCount : UDINT; (*Maximum number of pick-and-place objects and pick-and-place object placeholders*)
 		MaxPositionError : LREAL; (*Maximum deviation between register items and the position of the motion source when compensating the position input signal, taking into account configured movement limits [Measurement units]*)
-		MotionSource : MpPRLinMotSrcType; (*Source describing the conveyor movement (along the x-direction)*)
+		MotionSource : MpPRLinMotSrcType; (*Source describing the conveyor movement*)
 	END_STRUCT;
 	MpPRTypType : STRUCT
 		Type : MpPRTypEnum; (*Type selector setting*)
@@ -550,80 +520,6 @@ TYPE
 	MpPRSVCont2DType : STRUCT (*Type mcPRSSVOUCVTVR_SHP_2D settings*)
 		ShapeType : MpPRSVCont2DShpTypType; (*Shape type*)
 	END_STRUCT;
-	MpPRSVCont3DTypEnum :
-		( (*Type selector setting*)
-		mcPRSSVOUCVTVRS3T_CUBE := 0, (*Cuboid - Cuboid*)
-		mcPRSSVOUCVTVRS3T_CYLINDER := 1, (*Cylinder - Cylinder*)
-		mcPRSSVOUCVTVRS3T_TRPZ_PRSM := 2 (*Trapezoidal prism - Trapezoidal prism*)
-		);
-	MpPRSVCont3DTypCubeDimType : STRUCT (*Dimensions of the object*)
-		Length : LREAL; (*Length [Measurement units]*)
-		Width : LREAL; (*Width [Measurement units]*)
-		Height : LREAL; (*Height [Measurement units]*)
-	END_STRUCT;
-	MpPRSVCont3DTypCubeStyleEnum :
-		( (*Style selector setting*)
-		mcPRSSVOUCVTVRS3TCS_FILL := 0, (*Fill - Fill*)
-		mcPRSSVOUCVTVRS3TCS_BORDER := 1 (*Border - Border*)
-		);
-	MpPRSVCont3DTypCubeStyleType : STRUCT (*Shape style*)
-		Type : MpPRSVCont3DTypCubeStyleEnum; (*Style selector setting*)
-	END_STRUCT;
-	MpPRSVCont3DTypCubeType : STRUCT (*Type mcPRSSVOUCVTVRS3T_CUBE settings*)
-		Dimensions : MpPRSVCont3DTypCubeDimType; (*Dimensions of the object*)
-		Translation : McCfgTransXYZType; (*Translation parameters*)
-		Orientation : McCfgOrientType; (*Orientation parameters*)
-		Style : MpPRSVCont3DTypCubeStyleType; (*Shape style*)
-		Material : McScnSurfaceEnum; (*Material*)
-	END_STRUCT;
-	MpPRSVCont3DTypCylinderDimType : STRUCT (*Dimensions of the object*)
-		Radius : LREAL; (*Length [Measurement units]*)
-		Height : LREAL; (*Height [Measurement units]*)
-	END_STRUCT;
-	MpPRSVCont3DTypCylinderStyleEnum :
-		( (*Style selector setting*)
-		mcPRSSVOUCVTVRS3TCySS_FILL := 0, (*Fill - Fill*)
-		mcPRSSVOUCVTVRS3TCySS_BORDER := 1 (*Border - Border*)
-		);
-	MpPRSVCont3DTypCylinderStyleType : STRUCT (*Shape style*)
-		Type : MpPRSVCont3DTypCylinderStyleEnum; (*Style selector setting*)
-	END_STRUCT;
-	MpPRSVCont3DTypCylinderType : STRUCT (*Type mcPRSSVOUCVTVRS3T_CYLINDER settings*)
-		Dimensions : MpPRSVCont3DTypCylinderDimType; (*Dimensions of the object*)
-		Translation : McCfgTransXYZType; (*Translation parameters*)
-		Orientation : McCfgOrientType; (*Orientation parameters*)
-		Style : MpPRSVCont3DTypCylinderStyleType; (*Shape style*)
-		Material : McScnSurfaceEnum; (*Material*)
-	END_STRUCT;
-	MpPRSVCont3DTypTrpzPrsmDimType : STRUCT (*Dimensions of the object*)
-		Length : LREAL; (*Length [Measurement units]*)
-		Width : LREAL; (*Width [Measurement units]*)
-		Height : LREAL; (*Height [Measurement units]*)
-	END_STRUCT;
-	MpPRSVCont3DTypTrpzPrsmStyleEnum :
-		( (*Style selector setting*)
-		mcPRSSVOUCVTVRS3TTPS_FILL := 0, (*Fill - Fill*)
-		mcPRSSVOUCVTVRS3TTPS_BORDER := 1 (*Border - Border*)
-		);
-	MpPRSVCont3DTypTrpzPrsmStyleType : STRUCT (*Shape style*)
-		Type : MpPRSVCont3DTypTrpzPrsmStyleEnum; (*Style selector setting*)
-	END_STRUCT;
-	MpPRSVCont3DTypTrpzPrsmType : STRUCT (*Type mcPRSSVOUCVTVRS3T_TRPZ_PRSM settings*)
-		Dimensions : MpPRSVCont3DTypTrpzPrsmDimType; (*Dimensions of the object*)
-		Translation : McCfgTransXYZType; (*Translation parameters*)
-		Orientation : McCfgOrientType; (*Orientation parameters*)
-		Style : MpPRSVCont3DTypTrpzPrsmStyleType; (*Shape style*)
-		Material : McScnSurfaceEnum; (*Material*)
-	END_STRUCT;
-	MpPRSVCont3DTypType : STRUCT (*Shape type*)
-		Type : MpPRSVCont3DTypEnum; (*Type selector setting*)
-		Cuboid : MpPRSVCont3DTypCubeType; (*Type mcPRSSVOUCVTVRS3T_CUBE settings*)
-		Cylinder : MpPRSVCont3DTypCylinderType; (*Type mcPRSSVOUCVTVRS3T_CYLINDER settings*)
-		TrapezoidalPrism : MpPRSVCont3DTypTrpzPrsmType; (*Type mcPRSSVOUCVTVRS3T_TRPZ_PRSM settings*)
-	END_STRUCT;
-	MpPRSVCont3DType : STRUCT (*Type mcPRSSVOUCVTVR_SHP_3D settings*)
-		Type : MpPRSVCont3DTypType; (*Shape type*)
-	END_STRUCT;
 	MpPRSVContMeshType : STRUCT (*Type mcPRSSVOUCVTVR_MESH_3D settings*)
 		FileName : STRING[250]; (*File name of 3D mesh located at file device configured in object hierarchy. Supported format: *.stl*)
 		Translation : McCfgTransXYZType; (*Translation parameters*)
@@ -634,7 +530,6 @@ TYPE
 		Type : MpPRSVTmplVREnum; (*Visual representation selector setting*)
 		Frame : MpPRSVContFrmType; (*Type mcPRSSVOUCVTVR_FRM settings*)
 		Shape2D : MpPRSVCont2DType; (*Type mcPRSSVOUCVTVR_SHP_2D settings*)
-		Shape3D : MpPRSVCont3DType; (*Type mcPRSSVOUCVTVR_SHP_3D settings*)
 		Mesh3D : MpPRSVContMeshType; (*Type mcPRSSVOUCVTVR_MESH_3D settings*)
 	END_STRUCT;
 	MpPRSVOBJSTStatEnum :

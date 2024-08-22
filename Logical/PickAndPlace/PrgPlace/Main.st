@@ -1,96 +1,145 @@
 
 PROGRAM _INIT
 
-    P_Step := P_WAIT_ENABLE;
-    Error := FALSE;
-
-    PlaceHoldersSpacing := 120; // distance between two consecutive place holders
-    	 
+	P_Step := P_WAIT_ENABLE;
+	Error := FALSE;
+	restart := FALSE; 
+	polka := 0;
+	PlaceHoldersSpacing := 120; // distance between two consecutive place holders
+	tablicaPlace[0] := 80;
+	tablicaPlace[1] := 125;
+	tablicaPlace[2] := 170;
+	tablicaPlace[3] := 205;
+	
+	PlaceY := 30;
+	
+	abc := 0;
+	iteracja := 0;
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
-    CASE P_Step OF
-        P_WAIT_ENABLE:
-            P_Step := P_ENABLE_REGISTER_FB;
+	CASE P_Step OF
+		P_WAIT_ENABLE:
+			P_Step := P_ENABLE_REGISTER_FB;
 			
-        P_ENABLE_REGISTER_FB:
-            MpPickRegister_0.Enable := TRUE;
-            P_Step := P_WAIT_ENABLE_REGISTER_FB;
+		P_ENABLE_REGISTER_FB:
+			MpPickRegister_0.Enable := TRUE;
+			P_Step := P_WAIT_ENABLE_REGISTER_FB;
 			
-        P_WAIT_ENABLE_REGISTER_FB:
-            IF MpPickRegister_0.Active THEN
-                P_Step := P_ENABLE_REGISTER_COMP;
+		P_WAIT_ENABLE_REGISTER_FB:
+			IF MpPickRegister_0.Active THEN
+				P_Step := P_ENABLE_REGISTER_COMP;
             
-            ELSIF MpPickRegister_0.Error THEN
-                LastStep := P_Step;
-                P_Step := P_ERROR;
-            END_IF;
+			ELSIF MpPickRegister_0.Error THEN
+				LastStep := P_Step;
+				P_Step := P_ERROR;
+			END_IF;
 			
-        P_ENABLE_REGISTER_COMP:
-            MpPickRegister_0.RegisterEnable := TRUE;
-            P_Step := P_WAIT_ENABLE_REGISTER_COMP;
+		P_ENABLE_REGISTER_COMP:
+			MpPickRegister_0.RegisterEnable := TRUE;
+			P_Step := P_WAIT_ENABLE_REGISTER_COMP;
 			
-        P_WAIT_ENABLE_REGISTER_COMP:
-            IF MpPickRegister_0.RegisterActive THEN
-                P_Step := P_ENABLE_ADD_REGISTER_FBS;
+		P_WAIT_ENABLE_REGISTER_COMP:
+			IF MpPickRegister_0.RegisterActive THEN
+				P_Step := P_ENABLE_ADD_REGISTER_FBS;
             
-            ELSIF MpPickRegister_0.Error THEN
-                LastStep := P_Step;
-                P_Step := P_ERROR;
-            END_IF;
+			ELSIF MpPickRegister_0.Error THEN
+				LastStep := P_Step;
+				P_Step := P_ERROR;
+			END_IF;
 			
-        P_ENABLE_ADD_REGISTER_FBS:
-            MpPickRegCreatePlaceholder.Enable := TRUE;
-            MpPickRegCreatePlaceholder.Create := FALSE;
-            P_Step := P_WAIT_ENABLE_ADD_REGISTER_FBS;
+		P_ENABLE_ADD_REGISTER_FBS:
+			MpPickRegCreatePlaceholder.Enable := TRUE;
+			MpPickRegCreatePlaceholder.Create := FALSE;
+			P_Step := P_WAIT_ENABLE_ADD_REGISTER_FBS;
 			
-        P_WAIT_ENABLE_ADD_REGISTER_FBS:
-            IF 	MpPickRegCreatePlaceholder.Active THEN
-                P_Step := P_WAIT_START_PROCESS;
+		P_WAIT_ENABLE_ADD_REGISTER_FBS:
+			IF 	MpPickRegCreatePlaceholder.Active THEN
+				P_Step := P_WAIT_START_PROCESS;
             
-            ELSIF MpPickRegCreatePlaceholder.Error THEN
-                LastStep := P_Step;
-                P_Step := P_ERROR;
-            END_IF;
+			ELSIF MpPickRegCreatePlaceholder.Error THEN
+				LastStep := P_Step;
+				P_Step := P_ERROR;
+			END_IF;
 			
-        P_WAIT_START_PROCESS: // waits user start command and conveyor moving
-            ReadyPlaceReg := TRUE;
-            IF CmdStart AND ReadyToStart AND (PlaceConveyorPosition > 0) THEN
-                P_Step := P_CREATE_OBJECTS;
-            END_IF;
+		P_WAIT_START_PROCESS: // waits user start command and conveyor moving
+			ReadyPlaceReg := TRUE;
+			IF CmdStart AND ReadyToStart (*AND (PlaceConveyorPosition > 0)*) THEN
+				P_Step := P_CREATE_OBJECTS;
+			END_IF;
 			
-        (* We need to create positions (place holders) on place conveyor where to place picked objects *)
-        P_CREATE_OBJECTS:
-        
-            ElapsedDistance := DistanceOverPeriod(PlaceConveyorPosition, LastPlaceHolderConveyorPosition, PlaceConveyorLength);
-            
-            IF (ElapsedDistance >= PlaceHoldersSpacing) THEN
-        
-                MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
-                MpPickRegCreatePlaceholder.Parameters.Mode := mpPICK_CREATE_SINGLEITEM_PLACEH;
-                MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
-                MpPickRegCreatePlaceholder.Parameters.Translation.X := 0;
-                MpPickRegCreatePlaceholder.Parameters.Translation.Y := 125; // in the middle of conveyor width
-                MpPickRegCreatePlaceholder.Create := TRUE;
+			(* We need to create positions (place holders) on place conveyor where to place picked objects *)
+		P_CREATE_OBJECTS:
 
-                LastPlaceHolderConveyorPosition := MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position;
-            ELSE
-                MpPickRegCreatePlaceholder.Create := FALSE;
-            END_IF
 			
-        P_ERROR:
-            Error := TRUE;
-            ReadyPlaceReg := FALSE;
+			IF abc THEN
 
-    END_CASE;
+					
+				CASE iteracja OF
+					0:
+						MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
+						MpPickRegCreatePlaceholder.Parameters.Mode := mpPICK_CREATE_SINGLEITEM_PLACEH;
+						MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
+						MpPickRegCreatePlaceholder.Parameters.Translation.X := tablicaPlace[0];
+						MpPickRegCreatePlaceholder.Parameters.Translation.Y := PlaceY; // in the middle of conveyor width
+						MpPickRegCreatePlaceholder.Create := TRUE;
+						iteracja := 1;
+						abc := 0;
+						
+							
+			
+					1:
+						MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
+						MpPickRegCreatePlaceholder.Parameters.Mode := mpPICK_CREATE_SINGLEITEM_PLACEH;
+						MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
+						MpPickRegCreatePlaceholder.Parameters.Translation.X := tablicaPlace[1];
+						MpPickRegCreatePlaceholder.Parameters.Translation.Y := PlaceY; // in the middle of conveyor width
+						MpPickRegCreatePlaceholder.Create := TRUE;
+						iteracja := 2;
+						abc := 0;
+					2:
+						MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
+						MpPickRegCreatePlaceholder.Parameters.Mode := mpPICK_CREATE_SINGLEITEM_PLACEH;
+						MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
+						MpPickRegCreatePlaceholder.Parameters.Translation.X := tablicaPlace[2];
+						MpPickRegCreatePlaceholder.Parameters.Translation.Y := PlaceY; // in the middle of conveyor width
+						MpPickRegCreatePlaceholder.Create := TRUE;
+						iteracja := 3;
+						abc := 0;
+			
+					3:
+						MpPickRegCreatePlaceholder.Parameters.LatchedConveyor.Position := PlaceConveyorPosition;
+						MpPickRegCreatePlaceholder.Parameters.Mode := mpPICK_CREATE_SINGLEITEM_PLACEH;
+						MpPickRegCreatePlaceholder.Parameters.ObjectTypeName := 'MyProduct';
+						MpPickRegCreatePlaceholder.Parameters.Translation.X := tablicaPlace[3];
+						MpPickRegCreatePlaceholder.Parameters.Translation.Y := PlaceY; // in the middle of conveyor width
+						MpPickRegCreatePlaceholder.Create := TRUE;
+						iteracja := 4;
+						abc := 0;
+					4:
+						abc :=0;
+				END_CASE;
+			ELSE
+				MpPickRegCreatePlaceholder.Create := FALSE;
+				abc :=1;
+			END_IF
+			
+			
+		P_ERROR:
+			Error := TRUE;
+			ReadyPlaceReg := FALSE;
+
+	END_CASE;
     
-    (* FB calls *)    
-    MpPickRegister_0.MpLink := ADR(gPlaceRegister);
-    MpPickRegister_0();
+	(* FB calls *)    
+	MpPickRegister_0.MpLink := ADR(gPlaceRegister);
+	MpPickRegister_0();
     
-    MpPickRegCreatePlaceholder.MpLink := ADR(gPlaceRegister);
+	MpPickRegCreatePlaceholder.MpLink := ADR(gPlaceRegister);
 	MpPickRegCreatePlaceholder();
-	 
+
+	
+
 END_PROGRAM
 

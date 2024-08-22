@@ -1,4 +1,5 @@
 VAR
+	restart : BOOL;
 	CmdStart : BOOL := FALSE; (*Set = 1 to start the process*)
 	ReadyMechanics : BOOL := FALSE;
 	ReadyPickCore : BOOL := FALSE;
@@ -16,4 +17,12 @@ VAR
 	Y : LREAL;
 	Z : LREAL;
 	saveChanges : BOOL := FALSE;
+	setAxis1 : LREAL;
+	setAxis2 : LREAL;
+	setAxis3 : LREAL;
+	axis1 : LREAL;
+	axis2 : LREAL;
+	axis3 : LREAL;
+	TCP : BOOL := TRUE;
+	TEST : BOOL := TRUE;
 END_VAR

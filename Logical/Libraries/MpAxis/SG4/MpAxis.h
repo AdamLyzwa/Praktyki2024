@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MpAxis 5.26.1 */
+/* MpAxis 5.24.1 */
 
 #ifndef _MPAXIS_
 #define _MPAXIS_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MpAxis_VERSION
-#define _MpAxis_VERSION 5.26.1
+#define _MpAxis_VERSION 5.24.1
 #endif
 
 #include <bur/plctypes.h>
@@ -125,11 +125,6 @@ typedef enum MpAxisMoveCyclicVelocityModeEnum
 	mcAXIS_MCV_MODE_MOVE_VEL_CTRL
 } MpAxisMoveCyclicVelocityModeEnum;
 
-typedef struct MpAxisHomingAddTorqLimParType
-{	float PositiveDirection;
-	float NegativeDirection;
-} MpAxisHomingAddTorqLimParType;
-
 typedef struct MpAxisHomingOptionsType
 {	float StartVelocity;
 	float HomingVelocity;
@@ -149,7 +144,6 @@ typedef struct MpAxisHomingOptionsType
 	double SensorOffset;
 	enum McDirectionEnum SensorOffsetDirection;
 	enum McSwitchEnum DisableRestorePositionOnEnable;
-	struct MpAxisHomingAddTorqLimParType AdditionalTorqueLimit;
 } MpAxisHomingOptionsType;
 
 typedef struct MpAxisHomingType

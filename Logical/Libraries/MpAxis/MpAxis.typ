@@ -310,10 +310,6 @@ Parameters left at default values disable the associated optional functions.*)
 	MpAxisRecoveryInfoType : 	STRUCT 
 		RestartPosition : LREAL; (* Resulting restart position*)
 	END_STRUCT;
-	MpAxisHomingAddTorqLimParType : 	STRUCT 
-		PositiveDirection : REAL; (*Positive torque limit value for homing to blocks. If '0.0' is specified, the value of 'TorqueLimit' is used for positive direction. [Nm]*)
-		NegativeDirection : REAL; (*Negative torque limit value for homing to blocks. If '0.0' is specified, the value of 'TorqueLimit' is used for negative direction. [Nm]*)
-	END_STRUCT;
 	MpAxisHomingOptionsType : 	STRUCT 
 		StartVelocity : REAL; (*Velocity for reference switch search [measurement units/s]*)
 		HomingVelocity : REAL; (*Velocity (after reaching reference switch) [measurement units/s]*)
@@ -334,7 +330,6 @@ mcSWITCH_ON ... The direction of movement is not permitted to be changed during 
 		SensorOffset : LREAL; (*Sensor offset [measurement units]*)
 		SensorOffsetDirection : McDirectionEnum; (*Direction for sensor offset movement*)
 		DisableRestorePositionOnEnable : McSwitchEnum := mcSWITCH_OFF; (*Used for disabling RestorePosition homing regardless of other parametrization *)
-		AdditionalTorqueLimit : MpAxisHomingAddTorqLimParType; (*Additional, direction dependent torque limit values for homing to block*)
 	END_STRUCT;
 	MpAxisStopAtPositionType : 	STRUCT 
 		Activate : BOOL; (*Option to move to defined position before stop*)

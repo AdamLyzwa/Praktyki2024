@@ -11,4 +11,6 @@ END_VAR
 VAR
 	MpPickRegister_0 : MpPickRegister;
 	MpPickRegCreateProduct : MpPickRegCreateObject;
+	product : BOOL;
+	iteracje : USINT;
 END_VAR

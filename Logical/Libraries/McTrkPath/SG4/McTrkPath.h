@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* McTrkPath 5.26.1 */
+/* McTrkPath 5.24.1 */
 
 #ifndef _MCTRKPATH_
 #define _MCTRKPATH_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _McTrkPath_VERSION
-#define _McTrkPath_VERSION 5.26.1
+#define _McTrkPath_VERSION 5.24.1
 #endif
 
 #include <bur/plctypes.h>
@@ -107,32 +107,6 @@ typedef enum McTPLinMotSrcAxPrepEnum
 {	mcTPTLMSAP_NO_PREP = 0,
 	mcTPTLMSAP_LIN_REG = 1
 } McTPLinMotSrcAxPrepEnum;
-
-typedef enum McTPSVEnum
-{	mcTPSSVO_USE = 0,
-	mcTPSSVO_NOT_USE = 1
-} McTPSVEnum;
-
-typedef enum McTPSVUseNameEnum
-{	mcTPSSVOUN_VIS = 0,
-	mcTPSSVOUN_INVIS = 1
-} McTPSVUseNameEnum;
-
-typedef enum McTPSVUseFrmEnum
-{	mcTPSSVOUF_VIS = 0,
-	mcTPSSVOUF_INVIS = 1
-} McTPSVUseFrmEnum;
-
-typedef enum McTPSVUseVREnum
-{	mcTPSSVOUVR_NOT_USE = 0,
-	mcTPSSVOUVR_CUBE = 1,
-	mcTPSSVOUVR_CNVR_BELT = 2
-} McTPSVUseVREnum;
-
-typedef enum McTPSVUseContEnum
-{	mcTPSSVOUC_NOT_USE = 0,
-	mcTPSSVOUC_VIS = 1
-} McTPSVUseContEnum;
 
 typedef unsigned long McTrkFrmIdentType;
 
@@ -298,66 +272,6 @@ typedef struct McTPTypType
 typedef struct McCfgTrkPathType
 {	struct McTPTypType Type;
 } McCfgTrkPathType;
-
-typedef struct McTPSVUseNameType
-{	enum McTPSVUseNameEnum Type;
-} McTPSVUseNameType;
-
-typedef struct McTPSVUseFrmType
-{	enum McTPSVUseFrmEnum Type;
-} McTPSVUseFrmType;
-
-typedef struct McTPSVUseVRCubeDimType
-{	double Length;
-	double Width;
-	double Height;
-} McTPSVUseVRCubeDimType;
-
-typedef struct McTPSVUseVRCubeType
-{	struct McTPSVUseVRCubeDimType Dimensions;
-	struct McCfgTransXYZType Translation;
-	struct McCfgOrientType Orientation;
-	enum McScnSurfaceEnum Material;
-} McTPSVUseVRCubeType;
-
-typedef struct McTPSVUseVRCnvrBeltDimType
-{	double Length;
-	double Width;
-	double Height;
-} McTPSVUseVRCnvrBeltDimType;
-
-typedef struct McTPSVUseVRCnvrBeltType
-{	struct McTPSVUseVRCnvrBeltDimType Dimensions;
-	struct McCfgTransXYZType Translation;
-	struct McCfgOrientType Orientation;
-	enum McScnSurfaceEnum Material;
-} McTPSVUseVRCnvrBeltType;
-
-typedef struct McTPSVUseVRType
-{	enum McTPSVUseVREnum Type;
-	struct McTPSVUseVRCubeType Cuboid;
-	struct McTPSVUseVRCnvrBeltType ConveyorBelt;
-} McTPSVUseVRType;
-
-typedef struct McTPSVUseContType
-{	enum McTPSVUseContEnum Type;
-} McTPSVUseContType;
-
-typedef struct McTPSVUseType
-{	struct McTPSVUseNameType Name;
-	struct McTPSVUseFrmType Frame;
-	struct McTPSVUseVRType VisualRepresentation;
-	struct McTPSVUseContType Content;
-} McTPSVUseType;
-
-typedef struct McTPSVType
-{	enum McTPSVEnum Type;
-	struct McTPSVUseType Used;
-} McTPSVType;
-
-typedef struct McCfgTrkPathScnType
-{	struct McTPSVType SceneViewerObject;
-} McCfgTrkPathScnType;
 
 typedef struct MC_BR_TrackingFramesCreate
 {

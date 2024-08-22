@@ -1,0 +1,17 @@
+
+TYPE
+	Krok : 
+		(
+		HOME,
+		POWER,
+		PROG,
+		CHECK,
+		RUCH,
+		FLAGI,
+		WAIT,
+		POWERAXIS,
+		HOMEAXIS,
+		CHECKAXIS,
+		CHECKDELTA
+		);
+END_TYPE

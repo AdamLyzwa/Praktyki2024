@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MpPick 5.26.1 */
+/* MpPick 5.24.1 */
 
 #ifndef _MPPICK_
 #define _MPPICK_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MpPick_VERSION
-#define _MpPick_VERSION 5.26.1
+#define _MpPick_VERSION 5.24.1
 #endif
 
 #include <bur/plctypes.h>
@@ -228,11 +228,6 @@ typedef enum MpPRTLCMSPPVMLIAccEnum
 {	mcPRLinMotSrcPPVMLIA_BASIC = 0
 } MpPRTLCMSPPVMLIAccEnum;
 
-typedef enum MpPRTLCMSPPVMLIDirEnum
-{	mcPRLinMotSrcPPVMLID_BIDIR = 0,
-	mcPRLinMotSrcPPVMLID_POS_ONLY = 1
-} MpPRTLCMSPPVMLIDirEnum;
-
 typedef enum MpPRLinMotSrcPosPVPrepEnum
 {	mcPRLinMotSrcPPVP_NO_PREP = 0,
 	mcPRLinMotSrcPPVP_LIN_REG = 1
@@ -248,11 +243,6 @@ typedef enum MpPRLinMotSrcAxMoveLimEnum
 	mcPRLinMotSrcAML_INT = 1
 } MpPRLinMotSrcAxMoveLimEnum;
 
-typedef enum MpPRTLCMSAMLUALDirEnum
-{	mcPRLinMotSrcAMLUALD_BIDIR = 0,
-	mcPRLinMotSrcAMLUALD_POS_ONLY = 1
-} MpPRTLCMSAMLUALDirEnum;
-
 typedef enum MpPRTLCMSAMLIVelEnum
 {	mcPRLinMotSrcAMLIV_BASIC = 0
 } MpPRTLCMSAMLIVelEnum;
@@ -260,11 +250,6 @@ typedef enum MpPRTLCMSAMLIVelEnum
 typedef enum MpPRTLCMSAMLIAccEnum
 {	mcPRLinMotSrcAMLIA_BASIC = 0
 } MpPRTLCMSAMLIAccEnum;
-
-typedef enum MpPRTLCMSAMLIDirEnum
-{	mcPRLinMotSrcAMLID_BIDIR = 0,
-	mcPRLinMotSrcAMLID_POS_ONLY = 1
-} MpPRTLCMSAMLIDirEnum;
 
 typedef enum MpPRLinMotSrcAxPrepEnum
 {	mcPRLinMotSrcAP_NO_PREP = 0,
@@ -330,27 +315,6 @@ typedef enum MpPRSVCont2DShpTypTrpzStyleEnum
 {	mcPRSSVOUCVTVRS2STTS_FILL = 0,
 	mcPRSSVOUCVTVRS2STTS_BORDER = 1
 } MpPRSVCont2DShpTypTrpzStyleEnum;
-
-typedef enum MpPRSVCont3DTypEnum
-{	mcPRSSVOUCVTVRS3T_CUBE = 0,
-	mcPRSSVOUCVTVRS3T_CYLINDER = 1,
-	mcPRSSVOUCVTVRS3T_TRPZ_PRSM = 2
-} MpPRSVCont3DTypEnum;
-
-typedef enum MpPRSVCont3DTypCubeStyleEnum
-{	mcPRSSVOUCVTVRS3TCS_FILL = 0,
-	mcPRSSVOUCVTVRS3TCS_BORDER = 1
-} MpPRSVCont3DTypCubeStyleEnum;
-
-typedef enum MpPRSVCont3DTypCylinderStyleEnum
-{	mcPRSSVOUCVTVRS3TCySS_FILL = 0,
-	mcPRSSVOUCVTVRS3TCySS_BORDER = 1
-} MpPRSVCont3DTypCylinderStyleEnum;
-
-typedef enum MpPRSVCont3DTypTrpzPrsmStyleEnum
-{	mcPRSSVOUCVTVRS3TTPS_FILL = 0,
-	mcPRSSVOUCVTVRS3TTPS_BORDER = 1
-} MpPRSVCont3DTypTrpzPrsmStyleEnum;
 
 typedef enum MpPRSVOBJSTStatEnum
 {	mcPRSVOBJS_NOT_USE = 0,
@@ -670,14 +634,9 @@ typedef struct MpPRTLCMSPPVMLIAccType
 	struct MpPRTLCMSPPVMLIAccBasicType Basic;
 } MpPRTLCMSPPVMLIAccType;
 
-typedef struct MpPRTLCMSPPVMLIDirType
-{	enum MpPRTLCMSPPVMLIDirEnum Type;
-} MpPRTLCMSPPVMLIDirType;
-
 typedef struct MpPRTLCMSPPVMLIType
 {	struct MpPRTLCMSPPVMLIVelType Velocity;
 	struct MpPRTLCMSPPVMLIAccType Acceleration;
-	struct MpPRTLCMSPPVMLIDirType Direction;
 } MpPRTLCMSPPVMLIType;
 
 typedef struct MpPRLinMotSrcPosPVMoveLimType
@@ -708,14 +667,6 @@ typedef struct MpPRLinMotSrcAxAxUseType
 {	enum MpPRLinMotSrcAxAxUseEnum Type;
 } MpPRLinMotSrcAxAxUseType;
 
-typedef struct MpPRTLCMSAMLUALDirType
-{	enum MpPRTLCMSAMLUALDirEnum Type;
-} MpPRTLCMSAMLUALDirType;
-
-typedef struct MpPRTLCMSAMLUALType
-{	struct MpPRTLCMSAMLUALDirType Direction;
-} MpPRTLCMSAMLUALType;
-
 typedef struct MpPRTLCMSAMLIVelBasicType
 {	float Velocity;
 } MpPRTLCMSAMLIVelBasicType;
@@ -734,19 +685,13 @@ typedef struct MpPRTLCMSAMLIAccType
 	struct MpPRTLCMSAMLIAccBasicType Basic;
 } MpPRTLCMSAMLIAccType;
 
-typedef struct MpPRTLCMSAMLIDirType
-{	enum MpPRTLCMSAMLIDirEnum Type;
-} MpPRTLCMSAMLIDirType;
-
 typedef struct MpPRTLCMSAMLIType
 {	struct MpPRTLCMSAMLIVelType Velocity;
 	struct MpPRTLCMSAMLIAccType Acceleration;
-	struct MpPRTLCMSAMLIDirType Direction;
 } MpPRTLCMSAMLIType;
 
 typedef struct MpPRLinMotSrcAxMoveLimType
 {	enum MpPRLinMotSrcAxMoveLimEnum Type;
-	struct MpPRTLCMSAMLUALType UseAxisLimits;
 	struct MpPRTLCMSAMLIType Internal;
 } MpPRLinMotSrcAxMoveLimType;
 
@@ -915,70 +860,6 @@ typedef struct MpPRSVCont2DType
 {	struct MpPRSVCont2DShpTypType ShapeType;
 } MpPRSVCont2DType;
 
-typedef struct MpPRSVCont3DTypCubeDimType
-{	double Length;
-	double Width;
-	double Height;
-} MpPRSVCont3DTypCubeDimType;
-
-typedef struct MpPRSVCont3DTypCubeStyleType
-{	enum MpPRSVCont3DTypCubeStyleEnum Type;
-} MpPRSVCont3DTypCubeStyleType;
-
-typedef struct MpPRSVCont3DTypCubeType
-{	struct MpPRSVCont3DTypCubeDimType Dimensions;
-	struct McCfgTransXYZType Translation;
-	struct McCfgOrientType Orientation;
-	struct MpPRSVCont3DTypCubeStyleType Style;
-	enum McScnSurfaceEnum Material;
-} MpPRSVCont3DTypCubeType;
-
-typedef struct MpPRSVCont3DTypCylinderDimType
-{	double Radius;
-	double Height;
-} MpPRSVCont3DTypCylinderDimType;
-
-typedef struct MpPRSVCont3DTypCylinderStyleType
-{	enum MpPRSVCont3DTypCylinderStyleEnum Type;
-} MpPRSVCont3DTypCylinderStyleType;
-
-typedef struct MpPRSVCont3DTypCylinderType
-{	struct MpPRSVCont3DTypCylinderDimType Dimensions;
-	struct McCfgTransXYZType Translation;
-	struct McCfgOrientType Orientation;
-	struct MpPRSVCont3DTypCylinderStyleType Style;
-	enum McScnSurfaceEnum Material;
-} MpPRSVCont3DTypCylinderType;
-
-typedef struct MpPRSVCont3DTypTrpzPrsmDimType
-{	double Length;
-	double Width;
-	double Height;
-} MpPRSVCont3DTypTrpzPrsmDimType;
-
-typedef struct MpPRSVCont3DTypTrpzPrsmStyleType
-{	enum MpPRSVCont3DTypTrpzPrsmStyleEnum Type;
-} MpPRSVCont3DTypTrpzPrsmStyleType;
-
-typedef struct MpPRSVCont3DTypTrpzPrsmType
-{	struct MpPRSVCont3DTypTrpzPrsmDimType Dimensions;
-	struct McCfgTransXYZType Translation;
-	struct McCfgOrientType Orientation;
-	struct MpPRSVCont3DTypTrpzPrsmStyleType Style;
-	enum McScnSurfaceEnum Material;
-} MpPRSVCont3DTypTrpzPrsmType;
-
-typedef struct MpPRSVCont3DTypType
-{	enum MpPRSVCont3DTypEnum Type;
-	struct MpPRSVCont3DTypCubeType Cuboid;
-	struct MpPRSVCont3DTypCylinderType Cylinder;
-	struct MpPRSVCont3DTypTrpzPrsmType TrapezoidalPrism;
-} MpPRSVCont3DTypType;
-
-typedef struct MpPRSVCont3DType
-{	struct MpPRSVCont3DTypType Type;
-} MpPRSVCont3DType;
-
 typedef struct MpPRSVContMeshType
 {	plcstring FileName[251];
 	struct McCfgTransXYZType Translation;
@@ -990,7 +871,6 @@ typedef struct MpPRSVTmplVRType
 {	enum MpPRSVTmplVREnum Type;
 	struct MpPRSVContFrmType Frame;
 	struct MpPRSVCont2DType Shape2D;
-	struct MpPRSVCont3DType Shape3D;
 	struct MpPRSVContMeshType Mesh3D;
 } MpPRSVTmplVRType;
 
