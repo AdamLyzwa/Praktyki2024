@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vdef:Visualization id="myVisu" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
+  <StartPage pageRefId="pageWork" />
+  <Pages>
+    <Page refId="pageView" />
+    <Page refId="pageAlarm" />
+    <Page refId="pageAudit" />
+    <Page refId="pageWork" />
+  </Pages>
+  <Navigations />
+  <BindingsSets>
+    <BindingsSet refId="ContentWork_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="ContentWork_eventbinding" />
+    <EventBindingsSet refId="ContentHeader_eventbinding" />
+  </EventBindingsSets>
+  <Dialogs>
+    <Dialog refId="dialog_0" />
+  </Dialogs>
+  <Contents>
+    <Content refId="ContentNavi" />
+    <Content refId="ContentHeader" />
+    <Content refId="contentView" />
+    <Content refId="ContentAlarm" />
+    <Content refId="ContentAudit" />
+    <Content refId="ContentWork" />
+    <Content refId="login" />
+  </Contents>
+  <SnippetsSets />
+  <VariablesSets />
+  <ExpressionsSets />
+  <Configurations>
+    <Configuration key="activityCount" value="false" />
+    <Gestures>
+      <!--<SystemGesture1 touchPoints="2" />
+		  <SystemGesture2 touchPoints="2" />
+		  <SystemGesture3 touchPoints="2" />-->
+    </Gestures>
+    <VirtualKeyboards>
+      <!--<InputProcessing onKeyDown="true" />-->
+    </VirtualKeyboards>
+  </Configurations>
+</vdef:Visualization>

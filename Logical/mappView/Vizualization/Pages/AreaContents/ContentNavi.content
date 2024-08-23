@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentNavi" height="760" width="240" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Navigation" id="Navigation1" top="0" left="0" width="240" height="760" zIndex="0" navRefId="navRefId1" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton1" top="50" left="20" width="200" height="100" zIndex="1" image="Media/SymbolLib/Symbols/Home.svg" pageId="pageWork" text="Main" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton2" top="190" left="20" width="200" height="100" zIndex="2" image="Media/SymbolLib/Alarm/Alarm.svg" pageId="pageAlarm" text="Alarm" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton3" top="330" left="20" width="200" height="100" zIndex="3" image="Media/SymbolLib/DisplayAndTouch/Calibrate.svg" pageId="pageAudit" text="Audit" />
+  </Widgets>
+</Content>

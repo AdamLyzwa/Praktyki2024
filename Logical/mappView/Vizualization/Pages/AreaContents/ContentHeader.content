@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentHeader" height="140" width="1600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton1" top="20" left="1240" width="160" height="100" zIndex="0" image="Media/SymbolLib/User/Logout.svg" text="Logout" cornerRadius="10px" backColor="rgba(255, 128, 0, 1)" disabledBackColor="rgba(0, 0, 0, 1)" disabledTextColor="rgba(0, 0, 0, 1)" mouseDownBackColor="rgba(0, 0, 0, 1)" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo1" top="40" left="860" width="361" height="60" zIndex="1" fontSize="30px" bold="true" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="20" left="20" width="140" zIndex="2" image="Media/Images/BuR.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Login" top="20" left="1440" width="130" zIndex="3" image="Media/SymbolLib/User/User.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="20" left="760" width="80" height="80" zIndex="4" image="Media/SymbolLib/User/UserGroup.svg" />
+  </Widgets>
+</Content>

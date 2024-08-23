@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ContentWork_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="ContentWork.Button1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setX">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setX">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button3" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setY">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_3">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button4" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setY">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button5" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setZ">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_5">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button6" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setZ">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentWork.Button7.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button7" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:saveChanges">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentWork.TabItem7.Click">
+      <Source xsi:type="widgets.brease.TabItem.Event" contentRefId="ContentWork" widgetRefId="TabItem7" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:TCP">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentWork.XYZ.Click">
+      <Source xsi:type="widgets.brease.TabItem.Event" contentRefId="ContentWork" widgetRefId="XYZ" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:TCP">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_6">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button9" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis1">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button10" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis1">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_8">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button11" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis2">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_9">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button12" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis2">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_10">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button13" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis3">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_11">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button14" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis3">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentWork.ToggleSwitch1.Click">
+      <Source xsi:type="widgets.brease.ToggleSwitch.Event" contentRefId="ContentWork" widgetRefId="ToggleSwitch1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TCPXYZ:ConveyerButton">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentWork.ToggleSwitch2.Click">
+      <Source xsi:type="widgets.brease.ToggleSwitch.Event" contentRefId="ContentWork" widgetRefId="ToggleSwitch2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::PrgPickCor:Gripper">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_12">
+      <Source xsi:type="opcUa.Event" refId="::PrgPickCor:Gripper" event="ValueChanged" />
+      <EventHandler condition="newValue&gt;oldValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentWork" widgetRefId="Image4">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue&lt;oldValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentWork" widgetRefId="Image4">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_13">
+      <Source xsi:type="opcUa.Event" refId="::TCPXYZ:MpAxisBasic_0.MoveActive" event="ValueChanged" />
+      <EventHandler condition="newValue&gt;oldValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentWork" widgetRefId="Image1">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue&lt;oldValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentWork" widgetRefId="Image1">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentWork.Button17.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button17" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TCPXYZ:HomeButton">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentWork.Button15.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button15" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:saveChanges">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_14">
+      <Source xsi:type="opcUa.Event" refId="::TCPXYZ:HomePosition" event="ValueChanged" />
+      <EventHandler condition="newValue&gt;oldValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentWork" widgetRefId="Image5">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue&lt;oldValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentWork" widgetRefId="Image5">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

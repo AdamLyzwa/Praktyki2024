@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="B4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="setX" />
+        <Variable Name="setY" />
+        <Variable Name="setZ" />
+        <Variable Name="saveChanges" />
+        <Variable Name="setAxis1" />
+        <Variable Name="setAxis2" />
+        <Variable Name="setAxis3" />
+        <Variable Name="TCP" />
+      </GlobalVariables>
+      <Task Name="TCPXYZ">
+        <Variable Name="MpDelta4Axis_0">
+          <Variable Name="Info">
+            <Variable Name="JointAxisPosition" RecursiveEnable="2" />
+          </Variable>
+          <Variable Name="X" />
+          <Variable Name="Y" />
+          <Variable Name="Z" />
+          <Variable Name="IsHomed" />
+        </Variable>
+        <Variable Name="ConveyerButton" />
+        <Variable Name="FB_Axis4">
+          <Variable Name="PowerOn" />
+        </Variable>
+        <Variable Name="MpAxisBasic_0">
+          <Variable Name="MoveActive" />
+        </Variable>
+        <Variable Name="HomeButton" />
+        <Variable Name="HomePosition" />
+      </Task>
+      <Task Name="PrgPickCor">
+        <Variable Name="Gripper" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

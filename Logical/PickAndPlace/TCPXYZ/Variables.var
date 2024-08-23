@@ -1,0 +1,20 @@
+
+VAR
+	KrokXYZ : Krok;
+	DeltaParameters : MpDelta4AxisParType;
+	MpDelta4Axis_0 : MpDelta4Axis;
+	AxisParam1 : MpAxisBasicParType;
+	AxisParam2 : MpAxisBasicParType;
+	AxisParam3 : MpAxisBasicParType;
+	FB_Axis1 : MpAxisBasic;
+	FB_Axis2 : MpAxisBasic;
+	FB_Axis3 : MpAxisBasic;
+	FB_Axis4 : MpAxisBasic;
+	AxisParam4 : MpAxisBasicParType;
+	MpAxisBasic_0 : MpAxisBasic;
+	ConveyerButton : BOOL := FALSE;
+	KrokConv : Krok;
+	AxisParameters_0 : MpAxisBasicParType;
+	HomeButton : BOOL;
+	HomePosition : BOOL;
+END_VAR
