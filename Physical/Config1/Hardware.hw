@@ -5,6 +5,9 @@
     <Connection Connector="SL" TargetModule="5APC3100_KBU1_000" TargetConnector="SL2" />
     <Connector Name="IF1">
       <Parameter ID="MtuSize" Value="1500" />
+      <Group ID="Channel1" />
+      <Parameter ID="ChannelID1" Value="McAcpBroadcast" />
+      <Parameter ID="ChannelType1" Value="OCTET[96]" />
       <Parameter ID="InternetAddress" Value="12.10.10.240" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>

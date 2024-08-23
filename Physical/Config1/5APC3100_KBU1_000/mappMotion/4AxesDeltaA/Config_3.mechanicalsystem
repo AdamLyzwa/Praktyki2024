@@ -19,56 +19,56 @@
               </Group>
               <Property ID="ArmLinkPointIsReadOnly" Value="0" />
               <Group ID="Arm1LinkPoint">
-                <Property ID="Angle" Value="0.0" />
-                <Property ID="Radius" Value="250.0" />
-                <Property ID="Z" Value="0.0" />
+                <Property ID="Angle" Value="-90" />
+                <Property ID="Radius" Value="150" />
+                <Property ID="Z" Value="0" />
               </Group>
               <Group ID="Arm2LinkPoint">
-                <Property ID="Angle" Value="90" />
-                <Property ID="Radius" Value="250.0" />
-                <Property ID="Z" Value="0.0" />
+                <Property ID="Angle" Value="0" />
+                <Property ID="Radius" Value="138" />
+                <Property ID="Z" Value="80" />
               </Group>
               <Group ID="Arm3LinkPoint">
-                <Property ID="Angle" Value="180" />
-                <Property ID="Radius" Value="250.0" />
-                <Property ID="Z" Value="0.0" />
+                <Property ID="Angle" Value="90" />
+                <Property ID="Radius" Value="150" />
+                <Property ID="Z" Value="0" />
               </Group>
             </Group>
             <Group ID="Arms">
               <Property ID="ArmIsReadOnly" Value="0" />
               <Group ID="Arm1">
-                <Property ID="UpperArmLength" Value="600.0" />
-                <Property ID="LowerArmLength" Value="900.0" />
+                <Property ID="UpperArmLength" Value="150" />
+                <Property ID="LowerArmLength" Value="435" />
               </Group>
               <Group ID="Arm2">
-                <Property ID="UpperArmLength" Value="600.0" />
-                <Property ID="LowerArmLength" Value="900.0" />
+                <Property ID="UpperArmLength" Value="150" />
+                <Property ID="LowerArmLength" Value="435" />
               </Group>
               <Group ID="Arm3">
-                <Property ID="UpperArmLength" Value="600.0" />
-                <Property ID="LowerArmLength" Value="900.0" />
+                <Property ID="UpperArmLength" Value="150" />
+                <Property ID="LowerArmLength" Value="435" />
               </Group>
-              <Property ID="LowerArmPairDistance" Value="0.0" />
+              <Property ID="LowerArmPairDistance" Value="90" />
             </Group>
             <Group ID="EndEffectorPlatform">
               <Property ID="ArmLinkPointIsReadOnly" Value="0" />
               <Group ID="Arm1LinkPoint">
-                <Property ID="Radius" Value="50.0" />
+                <Property ID="Radius" Value="80" />
                 <Property ID="Z" Value="0.0" />
               </Group>
               <Group ID="Arm2LinkPoint">
-                <Property ID="Radius" Value="50.0" />
+                <Property ID="Radius" Value="70" />
                 <Property ID="Z" Value="0.0" />
               </Group>
               <Group ID="Arm3LinkPoint">
-                <Property ID="Radius" Value="50.0" />
+                <Property ID="Radius" Value="80" />
                 <Property ID="Z" Value="0.0" />
               </Group>
               <Property ID="TranslationToFlangeIsReadOnly" Value="0" />
               <Group ID="TranslationToFlange">
                 <Property ID="X" Value="0.0" />
                 <Property ID="Y" Value="0.0" />
-                <Property ID="Z" Value="-150" />
+                <Property ID="Z" Value="-45" />
               </Group>
             </Group>
           </Group>
@@ -168,22 +168,7 @@
           <Selector ID="JointAxis[4]" Value="UseAxisLimits" />
         </Group>
         <Property ID="WorkingRangeIsReadOnly" Value="0" />
-        <Selector ID="WorkingRange" Value="Standard">
-          <Property ID="BaseToTopIsReadOnly" Value="0" />
-          <Property ID="BaseToTop" Value="400" />
-          <Property ID="TopHeightIsReadOnly" Value="0" />
-          <Property ID="TopHeight" Value="100" />
-          <Property ID="MiddleHeightIsReadOnly" Value="0" />
-          <Property ID="MiddleHeight" Value="400" />
-          <Property ID="BottomHeightIsReadOnly" Value="0" />
-          <Property ID="BottomHeight" Value="600" />
-          <Property ID="TopRadiusIsReadOnly" Value="0" />
-          <Property ID="TopRadius" Value="800" />
-          <Property ID="MiddleRadiusIsReadOnly" Value="0" />
-          <Property ID="MiddleRadius" Value="900" />
-          <Property ID="BottomRadiusIsReadOnly" Value="0" />
-          <Property ID="BottomRadius" Value="200" />
-        </Selector>
+        <Selector ID="WorkingRange" Value="NotUsed" />
       </Selector>
     </Selector>
   </Element>

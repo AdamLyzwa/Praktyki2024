@@ -9,6 +9,14 @@ END_VAR
 (*   *)
 (*Functionblocks*)
 VAR
-	MpPickRegister_0 : MpPickRegister;
+	MpPickRegCreatePlaceholder1 : MpPickRegCreateObject;
+	MpPickRegCreatePlaceholder2 : MpPickRegCreateObject;
+	MpPickRegCreatePlaceholder3 : MpPickRegCreateObject;
 	MpPickRegCreatePlaceholder : MpPickRegCreateObject;
+	MpPickRegister_0 : MpPickRegister;
+	polka : USINT;
+	tablicaPlace : ARRAY[0..3] OF LREAL;
+	PlaceY : LREAL;
+	iteracja : INT;
+	abc : BOOL;
 END_VAR

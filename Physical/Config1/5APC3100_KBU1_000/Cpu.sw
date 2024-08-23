@@ -2,8 +2,12 @@
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
-    <Task Name="TCPXYZ" Source="PickAndPlace.TCPXYZ.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="TCPXYZ" Source="PickAndPlace.TCPXYZ.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
     <Task Name="Program" Source="PickAndPlace.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="PrgMechs" Source="PickAndPlace.PrgMechs.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PrgPickCor" Source="PickAndPlace.PrgPickCore.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PrgPick" Source="PickAndPlace.PrgPick.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PrgPlace" Source="PickAndPlace.PrgPlace.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />

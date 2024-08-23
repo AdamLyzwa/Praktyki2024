@@ -16,23 +16,23 @@
       <Group ID="Position">
         <Property ID="LowerLimitMin" Value="-1.79769313486231E308" />
         <Property ID="UpperLimitMax" Value="1.79769313486231E308" />
-        <Property ID="LowerLimit" Value="-20" />
-        <Property ID="UpperLimit" Value="190" />
+        <Property ID="LowerLimit" Value="-30" />
+        <Property ID="UpperLimit" Value="110" />
       </Group>
       <Property ID="VelocityIsReadOnly" Value="0" />
       <Selector ID="Velocity">
         <Property ID="VelocityMax" Value="3.4E38" />
-        <Property ID="Velocity" Value="1250" />
+        <Property ID="Velocity" Value="50000" />
       </Selector>
       <Property ID="AccelerationIsReadOnly" Value="0" />
       <Selector ID="Acceleration">
         <Property ID="AccelerationMax" Value="3.4E38" />
-        <Property ID="Acceleration" Value="12500" />
+        <Property ID="Acceleration" Value="500000" />
       </Selector>
       <Property ID="DecelerationIsReadOnly" Value="0" />
       <Selector ID="Deceleration">
         <Property ID="DecelerationMax" Value="3.4E38" />
-        <Property ID="Deceleration" Value="12500" />
+        <Property ID="Deceleration" Value="500000" />
       </Selector>
       <Property ID="JerkIsReadOnly" Value="0" />
       <Selector ID="Jerk" Value="Basic">
@@ -59,23 +59,23 @@
       <Group ID="Position">
         <Property ID="LowerLimitMin" Value="-1.79769313486231E308" />
         <Property ID="UpperLimitMax" Value="1.79769313486231E308" />
-        <Property ID="LowerLimit" Value="-20" />
+        <Property ID="LowerLimit" Value="-30" />
         <Property ID="UpperLimit" Value="110" />
       </Group>
       <Property ID="VelocityIsReadOnly" Value="0" />
       <Selector ID="Velocity">
         <Property ID="VelocityMax" Value="3.4E38" />
-        <Property ID="Velocity" Value="1250" />
+        <Property ID="Velocity" Value="50000" />
       </Selector>
       <Property ID="AccelerationIsReadOnly" Value="0" />
       <Selector ID="Acceleration">
         <Property ID="AccelerationMax" Value="3.4E38" />
-        <Property ID="Acceleration" Value="12500" />
+        <Property ID="Acceleration" Value="500000" />
       </Selector>
       <Property ID="DecelerationIsReadOnly" Value="0" />
       <Selector ID="Deceleration">
         <Property ID="DecelerationMax" Value="3.4E38" />
-        <Property ID="Deceleration" Value="12500" />
+        <Property ID="Deceleration" Value="500000" />
       </Selector>
       <Property ID="JerkIsReadOnly" Value="0" />
       <Selector ID="Jerk" Value="Basic">
@@ -102,23 +102,23 @@
       <Group ID="Position">
         <Property ID="LowerLimitMin" Value="-1.79769313486231E308" />
         <Property ID="UpperLimitMax" Value="1.79769313486231E308" />
-        <Property ID="LowerLimit" Value="-20" />
-        <Property ID="UpperLimit" Value="190" />
+        <Property ID="LowerLimit" Value="-30" />
+        <Property ID="UpperLimit" Value="110" />
       </Group>
       <Property ID="VelocityIsReadOnly" Value="0" />
       <Selector ID="Velocity">
         <Property ID="VelocityMax" Value="3.4E38" />
-        <Property ID="Velocity" Value="1250" />
+        <Property ID="Velocity" Value="50000" />
       </Selector>
       <Property ID="AccelerationIsReadOnly" Value="0" />
       <Selector ID="Acceleration">
         <Property ID="AccelerationMax" Value="3.4E38" />
-        <Property ID="Acceleration" Value="12500" />
+        <Property ID="Acceleration" Value="500000" />
       </Selector>
       <Property ID="DecelerationIsReadOnly" Value="0" />
       <Selector ID="Deceleration">
         <Property ID="DecelerationMax" Value="3.4E38" />
-        <Property ID="Deceleration" Value="12500" />
+        <Property ID="Deceleration" Value="500000" />
       </Selector>
       <Property ID="JerkIsReadOnly" Value="0" />
       <Selector ID="Jerk" Value="Basic">

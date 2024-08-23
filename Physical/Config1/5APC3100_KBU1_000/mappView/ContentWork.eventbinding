@@ -95,7 +95,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button9" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setX">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis1">
             <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
           </Target>
         </Action>
@@ -105,7 +105,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button10" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setX">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis1">
             <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
           </Target>
         </Action>
@@ -115,7 +115,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button11" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setY">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis2">
             <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
           </Target>
         </Action>
@@ -125,7 +125,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button12" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setY">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis2">
             <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
           </Target>
         </Action>
@@ -135,7 +135,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button13" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setZ">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis3">
             <Method xsi:type="opcUa.NodeAction.AddValue" value="-1" />
           </Target>
         </Action>
@@ -145,7 +145,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentWork" widgetRefId="Button14" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setZ">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:setAxis3">
             <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
           </Target>
         </Action>

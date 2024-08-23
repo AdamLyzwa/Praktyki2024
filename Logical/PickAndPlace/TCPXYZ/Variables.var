@@ -8,4 +8,6 @@ VAR
 	FB_Axis1 : MpAxisBasic;
 	FB_Axis2 : MpAxisBasic;
 	FB_Axis3 : MpAxisBasic;
+	FB_Axis4 : MpAxisBasic;
+	AxisParam4 : MpAxisBasicParType;
 END_VAR

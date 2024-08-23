@@ -108,9 +108,9 @@ PROGRAM _CYCLIC
 	FB_Axis3.Parameters := ADR(AxisParam3);
 	FB_Axis3();
 	
-//	FB_Axis4.MpLink     := ADR(gAxisQ4);
-//	FB_Axis4.Parameters := ADR(AxisParam4);
-//	FB_Axis4();
+	FB_Axis4.MpLink     := ADR(gAxisQ4);
+	FB_Axis4.Parameters := ADR(AxisParam4);
+	FB_Axis4();
 //		
 
 END_PROGRAM
