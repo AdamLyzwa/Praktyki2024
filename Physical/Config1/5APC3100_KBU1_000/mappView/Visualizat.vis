@@ -10,6 +10,7 @@
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="ContentWork_binding" />
+    <BindingsSet refId="ContentAlarm_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="ContentWork_eventbinding" />

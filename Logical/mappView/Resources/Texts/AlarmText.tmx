@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">AlarmText</prop>
+  </header>
+  <body>
+    <tu tuid="PickRegisterError">
+      <tuv xml:lang="en">
+        <seg>Pick register error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PlaceRegisterError">
+      <tuv xml:lang="en">
+        <seg>Place register error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ConveyorAxisError">
+      <tuv xml:lang="en">
+        <seg>conveyor axis error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ConveyorVirtualAxisError">
+      <tuv xml:lang="en">
+        <seg>conveyor virtual axis error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DeltaVirtualAxisError">
+      <tuv xml:lang="en">
+        <seg>delta virtual axis error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DeltaAxis1Error">
+      <tuv xml:lang="en">
+        <seg>delta axis 1 error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DeltaAxis2Error">
+      <tuv xml:lang="en">
+        <seg>delta axis 2 error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DeltaAxis3Error">
+      <tuv xml:lang="en">
+        <seg>delta axis 3 error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DeltaError">
+      <tuv xml:lang="en">
+        <seg>delta error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PickRegCreateProductError">
+      <tuv xml:lang="en">
+        <seg>pick register creat product error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PickCoreError">
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>pic core error</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

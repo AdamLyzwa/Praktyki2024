@@ -7,6 +7,6 @@
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="Package">PickAndPlace</Object>
     <Object Type="Package">mappView</Object>
-    <Object Type="File" Description="Init, cyclic, exit code">Robotic.st</Object>
+    <Object Type="File">Robotics.st</Object>
   </Objects>
 </Package>

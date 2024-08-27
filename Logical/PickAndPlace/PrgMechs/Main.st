@@ -14,6 +14,10 @@ PROGRAM _INIT
 	MpAxisBasic_0.Enable := TRUE;
 	MpAxisBasic_1.Enable := TRUE;
 	
+	FB_AlarmCore.MpLink := ADR(gAlarmXCore);
+	FB_AlarmCore.Enable := TRUE;	
+	FB_AlarmHistory.MpLink := ADR(gAlarmXHistory);
+	FB_AlarmHistory.Enable := TRUE;
 
         
 	// dummy call of axis PVs just to avoid warning -2141192189 "The PV 'gAxisQx' does not exists" in logger
@@ -128,7 +132,25 @@ PROGRAM _CYCLIC
 	END_CASE    
     
 	ReadyToStart := ReadyMechanics AND ReadyPickReg AND ReadyPlaceReg AND ReadyPickCore;
-    
+	
+	IF MpDelta4Axis_0.Error THEN
+		MpAlarmXSet(gAlarmXCore,'DeltaError');
+	ELSE
+		MpAlarmXReset(gAlarmXCore,'DeltaError');	  
+	END_IF;
+	
+	IF MpAxisBasic_0.Error THEN	
+		MpAlarmXSet(gAlarmXCore,'ConveyorAxisError');
+	ELSE
+		MpAlarmXReset(gAlarmXCore,'ConveyorAxisError');	  
+	END_IF;
+	
+	IF MpAxisBasic_1.Error THEN	
+		MpAlarmXSet(gAlarmXCore,'ConveyorVirtualAxisError');
+	ELSE
+		MpAlarmXReset(gAlarmXCore,'ConveyorVirtualAxisError');	  
+	END_IF;
+	
 	(* Call FBs *)
 	MpDelta4Axis_0.MpLink     := ADR(g4AxDeltaA);
 	MpDelta4Axis_0.Parameters := ADR(DeltaParameters); 

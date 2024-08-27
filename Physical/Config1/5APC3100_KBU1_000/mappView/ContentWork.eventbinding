@@ -165,14 +165,14 @@
       <Source xsi:type="widgets.brease.ToggleSwitch.Event" contentRefId="ContentWork" widgetRefId="ToggleSwitch2" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::PrgPickCor:Gripper">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:Gripper">
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_12">
-      <Source xsi:type="opcUa.Event" refId="::PrgPickCor:Gripper" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:Gripper" event="ValueChanged" />
       <EventHandler condition="newValue&gt;oldValue">
         <Action>
           <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentWork" widgetRefId="Image4">

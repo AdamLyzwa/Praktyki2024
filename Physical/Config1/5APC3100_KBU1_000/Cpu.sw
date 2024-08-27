@@ -6,8 +6,8 @@
     <Task Name="Program" Source="PickAndPlace.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
     <Task Name="PrgMechs" Source="PickAndPlace.PrgMechs.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
     <Task Name="PrgPickCor" Source="PickAndPlace.PrgPickCore.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="PrgPick" Source="PickAndPlace.PrgPick.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
-    <Task Name="PrgPlace" Source="PickAndPlace.PrgPlace.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="PrgPick" Source="PickAndPlace.PrgPick.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PrgPlace" Source="PickAndPlace.PrgPlace.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
@@ -36,6 +36,7 @@
     <BinaryObject Name="mvLoader" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="McProfGen" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="mCoWebSc" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="TCLang" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="iomap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_4" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="asfw" Source="" Memory="SystemROM" Language="Binary" />
@@ -60,6 +61,9 @@
     <BinaryObject Name="Settings_1" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="viApp" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="viComp" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_12" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_13" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="McBase" Source="Libraries.McBase.lby" Memory="UserROM" Language="binary" Debugging="true" />
@@ -88,6 +92,7 @@
     <LibraryObject Name="DataObj" Source="Libraries.DataObj.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="astime" Source="Libraries.astime.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="McPureVAx" Source="Libraries.McPureVAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asmem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brsystem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asarprof" Source="" Memory="UserROM" Language="Binary" Debugging="true" />

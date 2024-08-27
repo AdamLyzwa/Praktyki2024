@@ -56,12 +56,18 @@
           <Selector ID="LimitCheckResolution" Value="Automatic" />
           <Selector ID="BufferTime" Value="Automatic" />
           <Selector ID="BarrierParametrization" Value="JointCoordinates" />
+          <Selector ID="TorqueLimitConsideration" Value="Exact" />
         </Selector>
         <Group ID="Miscellaneous">
           <Selector ID="NonMovementsLimit" Value="NotUsed" />
           <Group ID="TimeStretchOverride">
             <Selector ID="JerkSuppression" Value="NotUsed" />
           </Group>
+        </Group>
+      </Group>
+      <Group ID="StopReaction">
+        <Group ID="AxisError">
+          <Property ID="AxisReactionIsReadOnly" Value="0" />
         </Group>
       </Group>
       <Group ID="AxesGroupFeatures">
@@ -72,6 +78,6 @@
         <Property ID="FeatureRef[5]" Value="Feature_PathDefinition" />
       </Group>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/20/2024 12:23:14" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/23/2024 13:17:03" />
   </TimeStamps>
   <Modules>
     <Module Name="5APC3100_KBU1_000" Type="5APC3100.KBU1-000" X="172" Y="173" />
@@ -14,7 +14,7 @@
     <Module Name="8LVA23.B1030D200-0a" Type="8LVA23.B1030D200-0" X="340" Y="645" />
     <Module Name="8LVA23.B1030D200-0b" Type="8LVA23.B1030D200-0" X="454" Y="645" />
     <Module Name="8LVA23.B1030D200-0c" Type="8LVA23.B1030D200-0" X="558" Y="645" />
-    <Module Name="VSS112R24.042P-000" Type="VSS112R24.042P-000" X="602.9" Y="244" />
+    <Module Name="VSS112R24.042P-000" Type="VSS112R24.042P-000" X="602" Y="244" />
     <Module Name="X20BB80a" Type="X20BB80" X="314" Y="31" />
     <Module Name="X20BM11a" Type="X20BM11" X="352" Y="31" />
     <Module Name="X20DO8322" Type="X20DO8322" X="352" Y="31" />
@@ -24,6 +24,27 @@
     <Module Name="X20BC0083a" Type="X20BC0083" X="314" Y="31" />
   </Modules>
   <Links>
+    <Link From="5AC901.IPLK-00" To="X20BC0083a" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="218.8" Y="214" />
+      <Point X="218.8" Y="214" />
+      <Point X="225.8" Y="214" />
+      <Point X="235" Y="214" />
+      <Point X="235" Y="106" />
+      <Point X="313" Y="106" />
+      <Point X="328" Y="106" />
+      <Point X="328" Y="106" />
+    </Link>
+    <Link From="80VD100PD.C000-14" To="X20BC0083a" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="353" Y="419" />
+      <Point X="353" Y="404" />
+      <Point X="372" Y="404" />
+      <Point X="378" Y="404" />
+      <Point X="378" Y="335" />
+      <Point X="328" Y="335" />
+      <Point X="328" Y="131" />
+      <Point X="328" Y="121" />
+      <Point X="328" Y="121" />
+    </Link>
     <Link From="80VD100PD.C000-14" To="80VD100PD.C000-14a" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
       <Point X="363.5" Y="419.8889" />
       <Point X="363.5" Y="419.8889" />
@@ -76,6 +97,15 @@
       <Point X="389.5" Y="651.1" />
       <Point X="389.5" Y="651.1" />
     </Link>
+    <Link From="80VD100PD.C000-14a" To="VSS112R24.042P-000" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="527" Y="452" />
+      <Point X="527" Y="452" />
+      <Point X="536" Y="452" />
+      <Point X="620.9" Y="452" />
+      <Point X="620.9" Y="367" />
+      <Point X="620.9" Y="362" />
+      <Point X="620.9" Y="362" />
+    </Link>
     <Link From="80VD100PD.C000-14a" To="8LVA23.B1030D200-0b" FromPort="EC1" ToPort="EC" IsRoutedByUser="False">
       <Point X="486" Y="431" />
       <Point X="486" Y="431" />
@@ -117,36 +147,6 @@
       <Point X="607.5" Y="644.1" />
       <Point X="607.5" Y="651.1" />
       <Point X="607.5" Y="651.1" />
-    </Link>
-    <Link From="80VD100PD.C000-14a" To="VSS112R24.042P-000" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
-      <Point X="527" Y="452" />
-      <Point X="527" Y="452" />
-      <Point X="536" Y="452" />
-      <Point X="620.9" Y="452" />
-      <Point X="620.9" Y="367" />
-      <Point X="620.9" Y="362" />
-      <Point X="620.9" Y="362" />
-    </Link>
-    <Link From="5AC901.IPLK-00" To="X20BC0083a" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
-      <Point X="218.8" Y="214" />
-      <Point X="218.8" Y="214" />
-      <Point X="225.8" Y="214" />
-      <Point X="235" Y="214" />
-      <Point X="235" Y="106" />
-      <Point X="313" Y="106" />
-      <Point X="328" Y="106" />
-      <Point X="328" Y="106" />
-    </Link>
-    <Link From="80VD100PD.C000-14" To="X20BC0083a" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
-      <Point X="353" Y="419" />
-      <Point X="353" Y="404" />
-      <Point X="372" Y="404" />
-      <Point X="378" Y="404" />
-      <Point X="378" Y="335" />
-      <Point X="328" Y="335" />
-      <Point X="328" Y="131" />
-      <Point X="328" Y="121" />
-      <Point X="328" Y="121" />
     </Link>
   </Links>
   <InfoElements />

@@ -18,6 +18,7 @@
         <Variable Name="setAxis2" />
         <Variable Name="setAxis3" />
         <Variable Name="TCP" />
+        <Variable Name="Gripper" />
       </GlobalVariables>
       <Task Name="TCPXYZ">
         <Variable Name="MpDelta4Axis_0">
@@ -39,9 +40,7 @@
         <Variable Name="HomeButton" />
         <Variable Name="HomePosition" />
       </Task>
-      <Task Name="PrgPickCor">
-        <Variable Name="Gripper" />
-      </Task>
+      <Task Name="PrgPickCor" />
     </Module>
   </DefaultView>
 </OpcUaSource>

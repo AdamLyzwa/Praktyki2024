@@ -1,4 +1,5 @@
 VAR
+	Mode : BOOL := TRUE;
 	restart : BOOL;
 	CmdStart : BOOL := FALSE; (*Set = 1 to start the process*)
 	ReadyMechanics : BOOL := FALSE;
@@ -18,4 +19,5 @@ VAR
 	setAxis2 : LREAL;
 	setAxis3 : LREAL;
 	TCP : BOOL := TRUE;
+	Gripper : BOOL;
 END_VAR

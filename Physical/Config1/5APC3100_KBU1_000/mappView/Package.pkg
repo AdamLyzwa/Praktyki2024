@@ -7,5 +7,6 @@
     <Object Type="File">ContentWork.binding</Object>
     <Object Type="File">ContentWork.eventbinding</Object>
     <Object Type="File">ContentHeader.eventbinding</Object>
+    <Object Type="File">ContentAlarm.binding</Object>
   </Objects>
 </Package>

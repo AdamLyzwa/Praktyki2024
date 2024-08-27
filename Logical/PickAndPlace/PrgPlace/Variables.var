@@ -1,4 +1,5 @@
 VAR
+	GetObjects1 : MpPickRegGetObjects;
 	P_Step : PlaceStepEnum;
 	LastStep : PlaceStepEnum;
 	Error : BOOL;
@@ -18,5 +19,19 @@ VAR
 	tablicaPlace : ARRAY[0..3] OF LREAL;
 	PlaceY : LREAL;
 	iteracja : INT;
-	abc : BOOL;
+	MpPickRegCreateContainer : MpPickRegCreateObject;
+	abc : BOOL := TRUE;
+	ilosc1 : UINT;
+	DeltaParameters : MpDelta4AxisParType;
+	MpDelta4Axis_0 : MpDelta4Axis;
+	AxisParam1 : MpAxisBasicParType;
+	AxisParam2 : MpAxisBasicParType;
+	AxisParam3 : MpAxisBasicParType;
+	FB_Axis1 : MpAxisBasic;
+	FB_Axis2 : MpAxisBasic;
+	FB_Axis3 : MpAxisBasic;
+	FB_Axis4 : MpAxisBasic;
+	AxisParam4 : MpAxisBasicParType;
+	tryb : BOOL;
+	PHID : UDINT;
 END_VAR

@@ -7,4 +7,6 @@ VAR
 	AxisParameters_0 : MpAxisBasicParType;
 	MpAxisBasic_1 : MpAxisBasic;
 	AxisParameters_1 : MpAxisBasicParType;
+	FB_AlarmHistory : MpAlarmXHistory;
+	FB_AlarmCore : MpAlarmXCore;
 END_VAR

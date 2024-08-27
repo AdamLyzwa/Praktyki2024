@@ -16,7 +16,7 @@
       <Group ID="Position">
         <Property ID="LowerLimitMin" Value="-1.79769313486231E308" />
         <Property ID="UpperLimitMax" Value="1.79769313486231E308" />
-        <Property ID="LowerLimit" Value="-30" />
+        <Property ID="LowerLimit" Value="-90" />
         <Property ID="UpperLimit" Value="110" />
       </Group>
       <Property ID="VelocityIsReadOnly" Value="0" />
@@ -59,7 +59,7 @@
       <Group ID="Position">
         <Property ID="LowerLimitMin" Value="-1.79769313486231E308" />
         <Property ID="UpperLimitMax" Value="1.79769313486231E308" />
-        <Property ID="LowerLimit" Value="-30" />
+        <Property ID="LowerLimit" Value="-90" />
         <Property ID="UpperLimit" Value="110" />
       </Group>
       <Property ID="VelocityIsReadOnly" Value="0" />
@@ -102,7 +102,7 @@
       <Group ID="Position">
         <Property ID="LowerLimitMin" Value="-1.79769313486231E308" />
         <Property ID="UpperLimitMax" Value="1.79769313486231E308" />
-        <Property ID="LowerLimit" Value="-30" />
+        <Property ID="LowerLimit" Value="-90" />
         <Property ID="UpperLimit" Value="110" />
       </Group>
       <Property ID="VelocityIsReadOnly" Value="0" />
@@ -171,6 +171,6 @@
       <Property ID="TorqueIsInvisible" Value="0" />
       <Property ID="TorqueIsReadOnly" Value="0" />
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

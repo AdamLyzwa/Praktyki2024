@@ -60,6 +60,7 @@ PROGRAM _CYCLIC
             
 		PC_STARTED:
 			(* Nothing to do here *)
+			iloscMonet := MpPickCore_0.Info.ProcessedObjects;
 			IF MpPickCore_0.Error THEN
 				LastStep := PC_Step;
 				PC_Step  := PC_ERROR;
@@ -70,7 +71,6 @@ PROGRAM _CYCLIC
 			ReadyPickCore := FALSE;
         
 	END_CASE
-    
 	(* Call FBs *)
 	MpPickCore_0.MpLink := ADR(gPickCore_1);
 	MpPickCore_0();

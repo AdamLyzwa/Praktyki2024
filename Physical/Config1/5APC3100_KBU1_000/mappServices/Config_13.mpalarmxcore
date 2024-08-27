@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gAlarmXCore" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="PickCoreError" />
+        <Property ID="Message" Value="{$AlarmText/PickCoreError}" />
+        <Property ID="Code" Value="1" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="PickRegisterError" />
+        <Property ID="Message" Value="{$AlarmText/PickRegisterError}" />
+        <Property ID="Code" Value="2" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Name" Value="PlaceRegisterError" />
+        <Property ID="Message" Value="{$AlarmText/PlaceRegisterError}" />
+        <Property ID="Code" Value="3" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Name" Value="ConveyorAxisError" />
+        <Property ID="Message" Value="{$AlarmText/ConveyorAxisError}" />
+        <Property ID="Code" Value="4" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[4]">
+        <Property ID="Name" Value="ConveyorVirtualAxisError" />
+        <Property ID="Message" Value="{$AlarmText/ConveyorVirtualAxis}" />
+        <Property ID="Code" Value="5" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[5]">
+        <Property ID="Name" Value="DeltaVirtualAxisError" />
+        <Property ID="Message" Value="{$AlarmText/DeltaVirtualAxisError}" />
+        <Property ID="Code" Value="6" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[6]">
+        <Property ID="Name" Value="DeltaAxis1Error" />
+        <Property ID="Message" Value="{$AlarmText/DeltaAxis1Error}" />
+        <Property ID="Code" Value="7" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[7]">
+        <Property ID="Name" Value="DeltaAxis2Error" />
+        <Property ID="Message" Value="{$AlarmText/DeltaAxis2Error}" />
+        <Property ID="Code" Value="8" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[8]">
+        <Property ID="Name" Value="DeltaAxis3Error" />
+        <Property ID="Message" Value="{$AlarmText/DeltaAxis3Error}" />
+        <Property ID="Code" Value="9" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[9]">
+        <Property ID="Name" Value="DeltaError" />
+        <Property ID="Message" Value="{$AlarmText/DeltaError}" />
+        <Property ID="Code" Value="10" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[10]">
+        <Property ID="Name" Value="PickRegCreateProductError" />
+        <Property ID="Message" Value="{$AlarmText/PickRegCreate}" />
+        <Property ID="Code" Value="11" />
+        <Property ID="Severity" Value="10" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+    </Group>
+    <Group ID="mapp.AlarmX.Core.Snippets">
+      <Group ID="[0]">
+        <Property ID="Key" Value="" />
+      </Group>
+    </Group>
+  </Element>
+</Configuration>
